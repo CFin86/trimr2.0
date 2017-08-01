@@ -10,6 +10,20 @@ angular.module('TrimR.services', [])
             }
         }
 
+        this.isStylist = function () {
+            if (currentUser && currentUser.role === 'stylist') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        this.isUser = function () {
+            if (currentUser && currentUser.role === 'admin') {
+                return true;
+            } else {
+                return false;
+            }
+        }
         this.isAdmin = function () {
             if (currentUser && currentUser.role === 'admin') {
                 return true;

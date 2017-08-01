@@ -12,7 +12,7 @@ function configurePassport(app) {
         usernameField: 'email',
         passwordFields: 'password'
     }, function (email, password, done) {
-        userProc.readByEmail(email).then(function (user) {
+        userProc.GetUserByEmail(email).then(function (user) {
             if (!user) {
                 return done(null, false);
             }

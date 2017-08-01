@@ -7,8 +7,8 @@ exports.allStylists = function() {
     return db.rows("GetAllStylists", []);
 }
 
-exports.readByEmail = function(email) {
-    return db.row('GetUserByEmail', [email]);
+exports.GetUserByEmail = function(email, password) {
+    return db.row('GetUserByEmail', [email, password]);
 }
 
 exports.read = function(id) {

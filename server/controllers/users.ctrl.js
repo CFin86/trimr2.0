@@ -38,8 +38,8 @@ router.post('/login', function (req, res, next) {
             console.log(err); return res.sendStatus(500);
         }
         if (!user) {
-         console.log("The username/password is incorrect")
-            return res.status(401).send(info);
+            return res.send(user);
+            // return res.status(401).send(info);
         }
         req.logIn(user, function (err) {
             if (err) {
