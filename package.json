@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CFin86/TrimR.git"
+    "url": "git+https://github.com/CFin86/trimr2.0.git"
   },
   "author": "Chris Finney, Taylor Rowell, Ray Randle",
   "license": "TrimR/LICENSE",
   "bugs": {
-    "url": "https://github.com/CFin86/TrimR/issues"
+    "url": "https://github.com/CFin86/trimr2.0/issues"
   },
-  "homepage": "https://github.com/CFin86/TrimR/issues#readme",
+  "homepage": "https://github.com/CFin86/trimr2.0/issues#readme",
   "dependencies": {
     "@uirouter/angularjs": "^1.0.3",
     "angular": "^1.6.5",
