@@ -1,10 +1,10 @@
 app.controller("LoginController", ['$scope', "User", "$location", "UserService", "SEOService",
-    function ($scope, User, UserService, $location, SEOService) {
+    function ($scope, User,  $location, UserService, SEOService) {
          $scope.User = User.query();
         UserService.me().then(function () {
             redirect();
         });
-        console.log($scope.User);
+    
         $scope.login = function () {
             UserService.login($scope.email, $scope.password)
                 .then(function () {
@@ -17,7 +17,7 @@ app.controller("LoginController", ['$scope', "User", "$location", "UserService",
         function redirect() {
             var dest = $location.search().dest;
             if (!dest) {
-                dest = '/';
+                dest = '/clientdashboard';
             }
             $location.replace().path(dest).search('dest', null);
         }

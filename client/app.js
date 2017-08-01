@@ -57,14 +57,17 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                     views: {
                         'header': {
                             templateUrl: 'views/headers/header.html',
-                            controller: 'HeaderController'
+                            controller: 'HeaderController',
+                            requiresLogin: true
                         },
                         'content': {
                             templateUrl: '/views/clients/clientsView.html',
-                            controller: 'clientDEMOPAGEController'
+                            controller: 'clientsViewController',
+                            requiresLogin: true
                         },
                         'footer': {
-                            templateUrl: 'views/footer.html'
+                            templateUrl: 'views/footer.html',
+                            requiresLogin: true
                         }
                     }
                 })
