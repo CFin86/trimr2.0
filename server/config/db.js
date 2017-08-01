@@ -11,12 +11,10 @@ var mysql = require("mysql");
 //our aws db
 var pool = mysql.createPool({
     connectionLimit: 20,
-    host: "hairdo.cvmqkxdkzggt.us-east-2.rds.amazonaws.com/",
+    host: "hairdo.cvmqkxdkzggt.us-east-2.rds.amazonaws.com",
     user: "ChrisTaylorRay",
-    password: process.env.DB_PASSWORD,
-    database: "hairdo"
-// });
-    
+    password: "password",
+    database: "HairDo"
 });
 
 exports.pool = pool;
