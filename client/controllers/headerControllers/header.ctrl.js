@@ -24,5 +24,11 @@ app.controller("HeaderController", ['$scope', '$location', 'EmailFactory', 'User
                 alert("All forms must be filled correctly!");
             });
         }
+         SEOService.setSEO({
+            title: 'trimr',
+            image: './images/Profilepics/driver.jpg',
+            url: "trimr.io",
+            description: "the haircut when you want, where you want"
+        })
     }
 ]);
