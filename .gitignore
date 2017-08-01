@@ -1,3 +1,4 @@
 .variables
 node_modules
-.vscode
+.vscodesendgrid.env
+sendgrid.env
