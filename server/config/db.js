@@ -14,9 +14,7 @@ var pool = mysql.createPool({
     host: "hairdo.cvmqkxdkzggt.us-east-2.rds.amazonaws.com/",
     user: "ChrisTaylorRay",
     password: process.env.DB_PASSWORD,
-    database: "hairdo"
-// });
-    
+    database: "HairDo"    
 });
 
 exports.pool = pool;
