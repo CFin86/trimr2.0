@@ -25,13 +25,25 @@ app.use(prerender);
 
 configurePassport(app);
 
-
+// // SALTY HASHED PASSWORDS FOR USERS
 // userProc.all().then(function (users) {
 //     users.forEach(function (user) {
-//         console.log("Updating password for user " + user.firstname);
+//         console.log("Updating password for user " + user.firstName);
 //         utils.encryptPassword(user.password).then(function (hash) {
-//             userProc.updatePw(user.id, hash).then(function () {
-//                 console.log("Successfully updated the password for" + user.id)
+//             userProc.updatePassword(user.ID, hash).then(function () {
+//                 console.log("Successfully updated the password for " + user.ID)
+//             })
+//         })
+//     });
+// });
+
+// // SALTY HASHED PASSWORDS FOR STYLISTS
+// userProc.allStylists().then(function (users) {
+//     users.forEach(function (user) {
+//         console.log("Updating password for user " + user.firstName);
+//         utils.encryptPassword(user.password).then(function (hash) {
+//             userProc.updatePassword(user.ID, hash).then(function () {
+//                 console.log("Successfully updated the password for " + user.ID)
 //             })
 //         })
 //     });
