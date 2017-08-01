@@ -1,0 +1,39 @@
+<!-- *********this is for login with fbook but we need a url********** -->
+
+<!-- <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1932773663613391',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script> -->
+
+<div id="login" class="heading" role="dialog">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Login to Your Account</h1><br>
+            <form>
+                <input type="email" ng-model="email" placeholder="E-mail Address" autofocus, required>
+                <input type="password" ng-model="password" placeholder="Password"required>
+                <button type="submit" class="btn btn-danger btn-lg" ng-click="login()">Login </button>
+                <button type="button" class="btn btn-default btn-lg" ng-click="home()">Cancel</button>
+            </form>
+
+            <div class="login-help">
+                <!-- #######FIX THIS SHIT###### -->
+                <a href="http://www.5z8.info/awesome-real-life-headshots_c5l9nk_56-DEPLOY-TROJAN-287.mw9----">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</div>
