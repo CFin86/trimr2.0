@@ -26,16 +26,27 @@ app.use(prerender);
 configurePassport(app);
 
 
-// userProc.all().then(function (users) {
-//     users.forEach(function (user) {
-//         console.log("Updating password for user " + user.firstname);
-//         utils.encryptPassword(user.password).then(function (hash) {
-//             userProc.updatePw(user.id, hash).then(function () {
-//                 console.log("Successfully updated the password for" + user.id)
-//             })
-//         })
-//     });
-// });
+userProc.all().then(function (users) {
+    users.forEach(function (user) {
+        console.log("Updating password for user " + user.firstName);
+        utils.encryptPassword(user.password).then(function (hash) {
+            userProc.updatePassword(user.ID, hash).then(function () {
+                console.log("Successfully updated the password for " + user.ID)
+            })
+        })
+    });
+});
+
+userProc.allStylists().then(function (users) {
+    users.forEach(function (user) {
+        console.log("Updating password for user " + user.firstName);
+        utils.encryptPassword(user.password).then(function (hash) {
+            userProc.updatePassword(user.ID, hash).then(function () {
+                console.log("Successfully updated the password for " + user.ID)
+            })
+        })
+    });
+});
 
 app.use('/api', api);
 

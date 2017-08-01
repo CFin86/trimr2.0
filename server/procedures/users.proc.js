@@ -3,6 +3,9 @@ var db = require("../config/db.js");
 exports.all = function() {
     return db.rows("GetAllUsers", []);
 }
+exports.allStylists = function() {
+    return db.rows("GetAllStylists", []);
+}
 
 exports.readByEmail = function(email) {
     return db.row('GetUserByEmail', [email]);
