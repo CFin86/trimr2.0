@@ -1,4 +1,6 @@
+
 app.controller("ClientHeaderController", ['$scope', '$location', 'EmailFactory', 'UserService', 'SEOService',
+
     function ($scope, $location, EmailFactory, UserService, SEOService) {
 
         $scope.getStarted = function () {
@@ -13,7 +15,7 @@ app.controller("ClientHeaderController", ['$scope', '$location', 'EmailFactory',
         $scope.callMe = "CONTACT ME";
         $scope.getMessage = function () {
             var newEmail = {
-                to: 'chrisfinney86@gmail.com',
+                to: 'trowell52@gmail.com',
                 from: $scope.email,
                 subject: $scope.subject,
                 content: $scope.content
@@ -22,7 +24,8 @@ app.controller("ClientHeaderController", ['$scope', '$location', 'EmailFactory',
             var masterEmail = new EmailFactory(newEmail);
             masterEmail.$save(function () {
                 alert("Thank you for your message! We'll get in touch with you soon!");
-                $("#contactModal").modal('toggle');
+                // $("#contactModal").modal('toggle');
+                //  $("#stylistModal").modal('toggle');
             }, function () {
                 // console.log("Error sending the email")
                 alert("All forms must be filled correctly!");
