@@ -8,14 +8,6 @@ body {
     background: rgb(194, 214, 214);
 }
 
-
-<<<<<<< HEAD
-/* Taylor, what is this? */
-
-
-
-=======
->>>>>>> 709ac028b1ac060db3090a855e715e6808a22bab
 .jumbotron {
     background: url("/images/backgroundMaster2.jpg")no-repeat center center fixed;
     /* padding-bottom: 6rem !important; */
@@ -226,7 +218,7 @@ ol.breadcrumb {
 /* start of create Account styles */
 
 #logoDiv {
-    position: absolute;
+    position: relative;
     left: 50%;
     margin-left: -47px;
     width: 94px;
@@ -258,10 +250,11 @@ ol.breadcrumb {
     height: auto;
     width: 400px;
     max-width: 100%;
-    position: absolute;
-    top: 25rem;
+    position: relative;
+    /*top: 25rem;*/
     left: 50%;
     margin-left: -175px;
+    
 }
 
 #signup-form {
@@ -425,7 +418,7 @@ h1 {
 
 .navbar-absolute-bottom {
     background: lightblue;
-    bottom: 1.2rem;
+    /*bottom: 1.2rem;*/
   
 }
 
