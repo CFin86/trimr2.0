@@ -9,13 +9,6 @@ body {
 }
 
 
-/* Taylor, what is this? */
-
-.popupShop {
-    color: navy;
-    border-image: round;
-}
-
 .jumbotron {
     background: url("/images/backgroundMaster2.jpg")no-repeat center center fixed;
     /* padding-bottom: 6rem !important; */
@@ -437,11 +430,10 @@ h1 {
     padding-top: 1rem;
 }
 
-/* **********THIS IS RAY'S SHIT AND IF IT FUCKS EVERYTHING UP
- WE'RE GOING TO KILL HIM************* */
- body {
+
+ /*body {
     /* background: no-repeat center url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&dl=phung-h-i-247271.jpg&s=aa19eec5e88a5acb6e92fb039e5e38f1, ')  */
-}
+
 
 .container {
   padding: 20px;
@@ -671,10 +663,11 @@ html {
 	padding: 40px !important;
 }
 
+/*RAY YOUR SHIT IS FUCKING UP, GIVE A CLASS AND ID TO DIFFERENTIATE*/
 
 /* Buttons */
 
-.btn {
+/*.btn {
 	letter-spacing: 1px;
 	text-decoration: none;
 	background: none;
@@ -752,22 +745,22 @@ html {
 	line-height:22px;
 	border: 10px solid;
 	padding:13px 40px;
-}
+}*/
 
-h1{
+/*h1{
     height: 50px;
   color:#4CB493 !important;
   text-align: center;
   font-family: 'Shrikhand', cursive;
   padding-bottom: 70px;
-}
+}*/
 
-.jumbotron{
+/*.jumbotron{
   background-color: #222222 !important;
   height: 220px;
-}
+}*/
 
-#rbdiv{
+/*#rbdiv{
     padding-left: 170px;
     position: center;
-}
+}*/
