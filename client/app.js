@@ -56,8 +56,8 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                     url: '/clientdashboard',
                     views: {
                         'header': {
-                            templateUrl: 'views/headers/header.html',
-                            controller: 'HeaderController',
+                            templateUrl: 'views/headers/dpHeader.html',
+                            controller: 'ClientHeaderController',
                             requiresLogin: true
                         },
                         'content': {

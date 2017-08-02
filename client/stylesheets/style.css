@@ -437,7 +437,7 @@ h1 {
     padding-top: 1rem;
 }
 
-/* **********THIS IS RAY'S SHIT AND IF IT FUCKS EVERYTHING UP
+/* /* **********THIS IS RAY'S SHIT AND IF IT FUCKS EVERYTHING UP
  WE'RE GOING TO KILL HIM************* */
  body {
     /* background: no-repeat center url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&dl=phung-h-i-247271.jpg&s=aa19eec5e88a5acb6e92fb039e5e38f1, ')  */
@@ -592,7 +592,7 @@ html {
 
 
 /* Margin */
-
+/* 
 .margin-bottom-0 {
 	margin-bottom: 0 !important;
 }
@@ -655,10 +655,10 @@ html {
 
 .margin-right-10 {
 	margin-right: 10px !important;
-}
+} */
 
 /* Padding surround */
-
+/* 
 .padding-0 {
 	padding: 0px !important;
 }
@@ -670,10 +670,10 @@ html {
 .padding-50 {
 	padding: 40px !important;
 }
-
+ */
 
 /* Buttons */
-
+/*
 .btn {
 	letter-spacing: 1px;
 	text-decoration: none;
@@ -770,4 +770,4 @@ h1{
 #rbdiv{
     padding-left: 170px;
     position: center;
-}
+} */

@@ -1,7 +1,7 @@
-app.controller("HeaderController", ['$scope', '$location', 'EmailFactory', 'UserService', 'SEOService',
-    function ($scope, User, $location, EmailFactory, UserService, SEOService) {
+app.controller("HeaderController", ['$scope', '$location', 'EmailFactory', 'SEOService',
+    function ($scope, User, $location, SEOService) {
 
-    
+
         $scope.getStarted = function () {
             window.location.pathname = "/createAccount";
         };
@@ -24,7 +24,7 @@ app.controller("HeaderController", ['$scope', '$location', 'EmailFactory', 'User
                 alert("All forms must be filled correctly!");
             });
         }
-         SEOService.setSEO({
+        SEOService.setSEO({
             title: 'trimr',
             image: './images/Profilepics/driver.jpg',
             url: "trimr.io",

@@ -1,10 +1,10 @@
-app.controller("HeaderController", ['$scope', '$location', 'EmailFactory', 'UserService', 'SEOService',
-    function ($scope, User, $location, EmailFactory, UserService, SEOService) {
+app.controller("ClientHeaderController", ['$scope', '$location', 'EmailFactory', 'UserService', 'SEOService',
+    function ($scope, $location, EmailFactory, UserService, SEOService) {
 
         $scope.getStarted = function () {
             window.location.pathname = "/createAccount";
         };
-        
+
         $scope.logout = function () {
             UserService.logout();
             window.location.pathname = "/home";
@@ -28,5 +28,11 @@ app.controller("HeaderController", ['$scope', '$location', 'EmailFactory', 'User
                 alert("All forms must be filled correctly!");
             });
         }
+        SEOService.setSEO({
+            title: 'trimr',
+            image: './images/Profilepics/driver.jpg',
+            url: "trimr.io",
+            description: "the haircut when you want, where you want"
+        })
     }
 ]);
