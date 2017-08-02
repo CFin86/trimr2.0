@@ -11,10 +11,7 @@ body {
 
 /* Taylor, what is this? */
 
-.popupShop {
-    color: navy;
-    border-image: round;
-}
+
 
 .jumbotron {
     background: url("/images/backgroundMaster2.jpg")no-repeat center center fixed;
@@ -423,9 +420,10 @@ h1 {
 
 /* footer styles */
 
-.navbar-fixed-bottom {
+.navbar-absolute-bottom {
     background: lightblue;
-    top: 80rem;
+    bottom: 1.2rem;
+  
 }
 
 .rowBottom {
@@ -673,7 +671,7 @@ html {
 
 
 /* Buttons */
-
+/*
 .btn {
 	letter-spacing: 1px;
 	text-decoration: none;
@@ -752,20 +750,20 @@ html {
 	line-height:22px;
 	border: 10px solid;
 	padding:13px 40px;
-}
+}*/
 
-h1{
+/*h1{
     height: 50px;
   color:#4CB493 !important;
   text-align: center;
   font-family: 'Shrikhand', cursive;
   padding-bottom: 70px;
-}
+}*/
 
-.jumbotron{
+/*.jumbotron{
   background-color: #222222 !important;
   height: 220px;
-}
+}*/
 
 #rbdiv{
     padding-left: 170px;
