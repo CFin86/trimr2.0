@@ -45,8 +45,8 @@ exports.read = function(id) {
 	return db.row('GetSingleUser', [id]);
 }
 
-exports.write = function(first, last, email, password) {
-    return db.row("CreateUser", [first, last, email, password]);
+exports.create = function(email, hash, zip) {
+    return db.row('InsertUser', [email, hash, zip]);
 }
 
 exports.updateEmail = function(id, email) {

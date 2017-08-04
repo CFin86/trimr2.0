@@ -14,6 +14,17 @@ router.get("/", function (req, res) {
         res.status(500).send(err);
     })
 })
+   .post( function(req, res) {
+        utils.encryptPassword(req.body.password)
+        .then(function(hash) {
+            return procedures.create(req.body.email, req.body.zip, hash)
+        }).then(function(id) {
+            res.status(201).send(id);
+        }).catch(function(err) {
+            console.log(err);
+            res.sendStatus(500);
+        });
+    });
 
 router.post('/login', function (req, res, next) {
     passport.authenticate('local', function (err, user, info) {
