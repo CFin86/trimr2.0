@@ -8,14 +8,11 @@
     </div>
 </div>
 <button ng-click="logout()">Log out</button>
-=======
-
     </div>
 </div>
 <button class="btn btn-outlined btn-danger btn-lg" style="position:center-align" data-appointlet-organization="mobile-cutz" data-appointlet-service="47886"
     data-wow-delay="0.7s">Rapid Booking!!</button>
           <button ng-click="logout()" class="btn btn-danger btn-lg">Log Out</button>
->>>>>>> e421aebac3b7e9207b3afac40fe69e953706541a
 <div class="container">
     <div class="row">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -118,7 +115,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="profile-card text-center" ng-repeat="user in Users | filter:{role:'Stylist'}">
+                        <div class="profile-card text-center" ng-repeat="id in Users | filter:{role:'stylist'}">
                             <img class="img-responsive" src="https://images.unsplash.com/photo-1447877085163-3cce903855cd?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
                             <div class="profile-info">
                                 <img class="profile-pic" src="{{user.profileImg}}">
@@ -132,6 +129,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
                 <br>
       
