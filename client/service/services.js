@@ -1,79 +1,68 @@
 angular.module('TrimR.services', [])
     .service('UserService', ['$http', '$location', function ($http, $location) {
-        var currentUser;
+      var user;
+        var role;
 
         this.isLoggedIn = function () {
-            if (currentUser) {
+            if (user) {
                 return true;
-            } else {
-                return false;
             }
-        }
+            return false;
 
-        this.isStylist = function () {
-            if (currentUser && currentUser.role === 'stylist') {
-                return true;
-            } else {
-                return false;
-            }
-        }
-        this.isUser = function () {
-            if (currentUser && currentUser.role === 'admin') {
-                return true;
-            } else {
-                return false;
-            }
-        }
+        };
         this.isAdmin = function () {
-            if (currentUser && currentUser.role === 'admin') {
+            if (user.role === "admin") {
                 return true;
-            } else {
-                return false;
             }
-        }
+            return false;
+        };
+        this.requireLogin = function () {
+            if (!this.isLoggedIn()) {
+                var current = $location.path();
+                $location.path('/login').search('p', current);
+            }
+        };
+          this.requireAdmin = function () {
+            if (!this.isAdmin()) {
+                var current = $location.path();
+                alert("You're not allowed!")
+                window.location.pathname = "/";
+            }
+        };
 
-        this.loginRedirect = function () {
-            var current = $location.path();
-            $location.path('/login').search('dest', current);
-        }
-
-        this.login = function (email, password) {
+   this.login = function (email, password) {
             return $http({
-                method: 'POST',
-                url: '/api/users/login',
-                data: {
-                    email: email,
-                    password: password
-                }
-            }).then(function (response) {
-                currentUser = response.data;
-                return currentUser;
-            });
+                method: "POST",
+                url: "http://localhost:3000/api/users/login",
+                data: { email: email, password: password}
+            }).then(function (success) {
+                user = success.data;
+                return success.data;
+            })
         }
 
         this.logout = function () {
             return $http({
-                method: 'GET',
-                url: '/api/users/logout'
+                method: "GET",
+                url: "http://localhost:3000/api/users/logout"
             }).then(function () {
-                currentUser = undefined;
-            });
+                user = undefined;
+            })
         }
 
         this.me = function () {
-            if (currentUser) {
-                return Promise.resolve(currentUser);
-            } else {
-                return $http({
-                    method: 'GET',
-                    url: '/api/users/me'
-                }).then(function (response) {
-                    currentUser = response.data;
-                    return currentUser;
-                });
+            if (user) {
+                return Promise.resolve(user);
             }
-        }
+            return $http({
+                url: "http://localhost:3000/api/users/me"
+            }).then(function (success) {
+                user = success.data;
+                return success.data;
+            })
+        };
     }])
+
     .service('SEOService', ['$rootScope', function ($rootScope) {
         this.setSEO = function (data) {
             $rootScope.seo = {};
