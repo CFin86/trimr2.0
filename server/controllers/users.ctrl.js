@@ -6,7 +6,6 @@ var utils = require("../config/utils.js");
 
 var router = express.Router();
 
-
 router.get("/", function (req, res) {
     return userProc.all().then(function (data) {
         res.send(data);
@@ -15,22 +14,6 @@ router.get("/", function (req, res) {
         res.status(500).send(err);
     })
 })
-// router.route("/me")
-//     .get(function(req, res){
-//         res.send(req.user);
-//     })
-
-// router.post('/newuser', function(req, res) {
-//         var u = req.body;
-
-//         userProc.write(u.email, u.password, u.firstname, u.lastname)
-//         .then(function(id) {
-//             res.send(id);
-//         }, function(err) {
-//             console.log(err);
-//             res.sendStatus(500);
-//         });
-// })
 
 router.post('/login', function (req, res, next) {
     passport.authenticate('local', function (err, user, info) {
@@ -38,11 +21,11 @@ router.post('/login', function (req, res, next) {
             console.log(err); return res.sendStatus(500);
         }
         if (!user) {
-            return res.send(user);
-            // return res.status(401).send(info);
+            return res.status(401).send(info);
         }
         req.logIn(user, function (err) {
             if (err) {
+                console.log(err);
                 return res.sendStatus(500);
             } else {
                 return res.send(user);
@@ -87,15 +70,15 @@ router.route("/me")
     .get(function(req, res){
         res.send(req.user);
     })
-
- .get(authMw.isAdmin, function(req, res) {
-        userProc.read(req.params.id).then(function(data) {
-            res.send(data);
-        }, function(err) {
-            console.log(err);
-            res.sendStatus(500);
-        })
-    })
+     
+//  .get(authMw.isAdmin, function(req, res) {
+//         userProc.read(req.params.id).then(function(data) {
+//             res.send(data);
+//         }, function(err) {
+//             console.log(err);
+//             res.sendStatus(500);
+//         })
+//     })
 
 router.route("/:id")
     .get(authMw.isAdmin, function(req, res){

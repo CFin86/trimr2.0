@@ -1,9 +1,11 @@
-app.controller('clientsViewController', ["$scope", 'UserService', "SEOService", "$stateParams",
-    function ($scope, UserService, SEOService) {
-
+app.controller('clientsViewController', ["$scope", 'UserService', "User", "SEOService", "$stateParams",
+    function ($scope, UserService, User, SEOService) {
+        // UserService.requireLogin();
+        // $scope.user = User.query();
+        // console.log(firstname);
         $scope.logout = function () {
             UserService.logout();
-            window.location.pathname = "/home";
+            window.location.pathname = "/";
         };
         SEOService.setSEO({
             title: 'trimr',

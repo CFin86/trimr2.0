@@ -1,27 +1,34 @@
-app.controller("LoginController", ['$scope', "User", "$location", "UserService", "SEOService",
-    function ($scope, User,  $location, UserService, SEOService) {
-         $scope.User = User.query();
-        UserService.me().then(function () {
+app.controller("LoginController", ['$scope', 'User', "$location", "UserService", "SEOService",
+    function ($scope, User, $location, UserService, SEOService) {
+        UserService.me().then(function (me) {
             redirect();
+
         });
-    
-        $scope.login = function () {
-            UserService.login($scope.email, $scope.password)
-                .then(function () {
-                    redirect();
-                }, function (err) {
-                    console.log(err);
-                });
+        $scope.home = function () {
+            window.location.pathname = "/";
         }
+        $scope.login = function () {
+            UserService.login($scope.email, $scope.password).then(function () {
+                // console.log(user.role);
+                redirect();
+            }, function (err) {
+                console.log(err);
+            });
+        };
 
         function redirect() {
-            var dest = $location.search().dest;
+            var dest = $location.search().p;
             if (!dest) {
-                dest = '/clientdashboard';
-            }
-            $location.replace().path(dest).search('dest', null);
-        }
-
+                dest = '/'
+            };
+            $location.path(dest).search('p', null).replace();
+            // if ($scope.user.role === "user") {
+            //     location.assign("/");
+            // }
+            // if ($scope.user.role === "stylist") {
+            //     location.assign("/stylist");;
+            // }
+        };
 
         SEOService.setSEO({
             title: 'trimr',
