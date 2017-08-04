@@ -1,6 +1,6 @@
+
 app.controller("HeaderController", ['$scope', '$location', 'EmailFactory', 'UserService', 'SEOService',
             function ($scope, $location, EmailFactory, UserService, SEOService) {
-
 
                 $scope.getStarted = function () {
                     window.location.pathname = "/createAccount";
@@ -19,8 +19,7 @@ app.controller("HeaderController", ['$scope', '$location', 'EmailFactory', 'User
                     masterEmail.$save(function () {
                         alert("Thank you for your message! We'll get in touch with you soon!");
 
-                        // $("#contactModal").modal('toggle');
-                        // $("#stylistModal").modal('toggle');
+
                     }, function () {
                         // console.log("Error sending the email")
                         alert("All forms must be filled correctly!");
