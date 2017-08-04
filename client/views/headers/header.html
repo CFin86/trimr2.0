@@ -57,7 +57,7 @@
                     <textarea class="form-control input-md" id="messageBox" placeholder="Please include a brief message" ng-model="content"></textarea>
                     <br>
 
-                    <button type="submit" class="btn btn-danger btn-sm" ng-click="getMessage()">Send </button>
+                    <button type="submit" class="btn btn-danger btn-sm" ng-click="getMessage()" data-dismiss="modal">Send </button>
                     <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
                 </form>
 
@@ -98,27 +98,27 @@
                 <form class="form-inline">
                     <div class="form-group">
                         <label class="sr-only" form="subject"> First Name</label>
-                        <input type="text" class="form-control input-sm" id="name" placeholder="Name" ng-model="subject">
+                        <input type="text" class="form-control input-sm" id="name" placeholder="Name" ng-model="subject2">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" form="email">Email Address</label>
-                        <input type="email" class="form-control input-sm" id="email" placeholder="Email" ng-model="email">
+                        <input type="email" class="form-control input-sm" id="email" placeholder="Email" ng-model="email2">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" form="subject">Phone Number </label>
-                        <input type="text" class="form-control input-sm" id="phone" placeholder="Phone Number" ng-model="number">
+                        <input type="text" class="form-control input-sm" id="phone" placeholder="Phone Number" ng-model="number2">
                     </div>
                     <br>
                     <div class="form-group">
                         <label class="sr-only" form="subject">Alabama Board of Cosmetology and Barbering Licence Number </label>
-                        <input type="text" class="form-control input-sm" id="license" placeholder="License Number" ng-model="license">
+                        <input type="text" class="form-control input-sm" id="license" placeholder="License Number" ng-model="license2">
                     </div>
                     </br>
                     <br>
-                    <textarea class="form-control input-md" id="messageBox" placeholder="Please include a brief message" ng-model="content"></textarea>
+                    <textarea class="form-control input-md" id="messageBox" placeholder="Please include a brief message" ng-model="content2"></textarea>
                     <br>
 
-                    <button type="submit" class="btn btn-danger btn-sm" ng-click="getMessage()" data-dismiss="modal"> Send </button>
+                    <button class="btn btn-danger btn-sm" ng-click="getStylistMessage()" data-dismiss="modal"> Send This </button>
                     <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
                 </form>
 
