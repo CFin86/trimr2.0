@@ -1,10 +1,10 @@
 var mysql = require("mysql");
-////angular blog testing
+// //angular blog testing
 // var pool = mysql.createPool({
 //     connectionLimit: 10,
-//     host: process.env.DB_HOST,
+//     host: "localhost",
 //     user: "bloguser",
-//     password: process.env.DB_PASSWORD,
+//     password: "xxx",
 //     database: "AngularBlog"
 // });
 

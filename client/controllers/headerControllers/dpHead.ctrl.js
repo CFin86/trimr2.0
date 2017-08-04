@@ -1,8 +1,6 @@
-
 app.controller("ClientHeaderController", ['$scope', '$location', 'EmailFactory', 'UserService', 'SEOService',
-
     function ($scope, $location, EmailFactory, UserService, SEOService) {
-
+        UserService.requireLogin();
         $scope.getStarted = function () {
             window.location.pathname = "/createAccount";
         };
