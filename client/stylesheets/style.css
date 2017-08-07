@@ -282,6 +282,27 @@ h2.newAccount2 {
 .pl-ziro {
     padding-left: 0px;
 }
+#email {
+     font-size: 16px;
+     transition: all linear 0.5s;
+     background: transparent;
+ }
+ 
+ #email.ng-invalid {
+     color: white;
+     background: #d9534f;
+ }
+ 
+ #zipcode {
+     font-size: 16px;
+      transition: all linear 0.5s;
+     background: transparent;
+ }
+ 
+ #zipcode.ng-invalid {
+     color: white;
+     background: red;
+ }
 
 #expiryMonth {
     margin-top: 5px;
