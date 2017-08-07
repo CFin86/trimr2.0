@@ -7,7 +7,12 @@
     <br><br><br>
     <h1 style="color:white"> Choose a Stylist</h1>
     <div class="col-lg-6 col-lg-offset-4" id="rbdiv">
-
+<<<<<<< HEAD
+        <a href="#" class="btn btn-outlined btn-theme btn-lg" data-appointlet-organization="mobile-cutz" data-appointlet-service="47886"
+            data-wow-delay="0.7s">Rapid Booking!!</a>
+    </div>
+</div>
+<button ng-click="logout()">Log out</button>
     </div>
 </div>
 <div class="text-center">
@@ -125,6 +130,22 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="profile-card text-center" ng-repeat="id in Users | filter:{role:'stylist'}">
+                            <img class="img-responsive" src="https://images.unsplash.com/photo-1447877085163-3cce903855cd?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                            <div class="profile-info">
+                                <img class="profile-pic" src="{{user.profileImg}}">
+                                <script src="https://d35xd5ovpwtfyi.cloudfront.net/loader/loader.min.js?v=1440696613" async defer></script>
+                                <h2 class="hvr-underline-from-center">{{user.firstName}} {{user.lastName}}<span>Professional Stylist/ King of the North{{</span></h2>
+                                <div>When the Night King comes knocking at your door, will your hair be ready? Be the talk of
+                                    Westeros. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26769"></i>
+                                <a href="http://www.linkedin.com"><i class="fa fa-linkedin fa-3x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                 <br>
                 <button id="clientViewBtn" ng-click="logout()" class="btn btn-danger btn-lg">Log Out</button>
