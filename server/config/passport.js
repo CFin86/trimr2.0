@@ -32,7 +32,7 @@ function configurePassport(app) {
     }));
 
     passport.serializeUser(function (user, done) {
-        done(null, user.ID);
+        done(null, user.id);
     });
     passport.deserializeUser(function (user, done) {
         userProc.read(user).then(function (user) {
