@@ -6,7 +6,7 @@
     <div class="wrapper">
         <h2 class="newAccount">Your hair </h2>
         <h2 class="newAccount2">deserves better</h2>
-        <form id="signup-form">
+        <form ng-submit="getTrimrd()" id="signup-form">
 
             <div class="form-group">
                 <label class="sr-only" form="email">Email Address</label>
@@ -25,10 +25,10 @@
                 <label class="sr-only" form="subject">Zip Code </label>
                 <input type="integer" class="form-control input-sm" id="zipcode" placeholder="Zip Code" ng-model="newUser.zip">
             </div>
-            <button ng-click="getTrimrd()" class="btn btn-danger btn-lg" id="signUpBtn">Get TrimRd</button>
 
             <div class="text-center">
-
+                <input type="submit" class="btn btn-danger btn-lg" id="signUpBtn" value="Get trimrd">
+                <br>
             </div>
         </form>
     </div>

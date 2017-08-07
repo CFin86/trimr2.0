@@ -15,6 +15,10 @@ app.controller("LoginController", ['$scope', 'User', "$location", "UserService",
                 console.log(err);
             });
         };
+        
+        $scope.stylistlogin = function () {
+            window.location.pathname = "/stylistdashboard";
+        }
 
         function redirect() {
             var dest = $location.search().p;

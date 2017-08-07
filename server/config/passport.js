@@ -30,9 +30,13 @@ function configurePassport(app) {
             return done(err);
         });
     }));
-
+// //for angular blog
+//     passport.serializeUser(function (user, done) {
+//         done(null, user.id);
+//     });
+//for trimr
     passport.serializeUser(function (user, done) {
-        done(null, user.ID);
+        done(null, user.id);
     });
     passport.deserializeUser(function (user, done) {
         userProc.read(user).then(function (user) {

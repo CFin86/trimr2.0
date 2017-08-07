@@ -29,7 +29,16 @@ angular.module('TrimR.services', [])
                 window.location.pathname = "/";
             }
         };
-
+   this.newUser = function (email, password, zip) {
+            return $http({
+                method: "POST",
+                url: "http://localhost:3000/api/users/createAccount",
+                data: { email: email, password: password, zip: zip}
+            }).then(function (success) {
+                user = success.data;
+                return success.data;
+            })
+        }
    this.login = function (email, password) {
             return $http({
                 method: "POST",

@@ -1,4 +1,4 @@
-var app = angular.module("TrimR", ['ui.router', 'ngResource', "TrimR.factories", "TrimR.services"]);
+var app = angular.module("TrimR", ['ui.router', 'ngResource',"TrimR.factories", "TrimR.services"]);
 
 app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
     function ($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -85,7 +85,7 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                 url: '/clientdashboard',
                 views: {
                     'header': {
-                        templateUrl: 'views/headers/dpHeader.html',
+                        templateUrl: 'views/headers/clientsViewHeader.html',
                         controller: 'ClientHeaderController'
                     },
                     'content': {
@@ -106,30 +106,40 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                     }
                 }
             })
+            .state('stylistlogin', {
+                url: '/stylistlogin',
+                views: {
+                    'content': {
+                        templateUrl: 'views/stylistlogin.html',
+                          controller:"StylistLoginController",
+                    }
+                }
+            })
             .state('stylist', {
-                url: '/stylist',
+                url: '/stylistDashboard',
                 views: {
                     'content': {
-                        templateUrl: 'views/stylist.html',
+                        templateUrl: 'views/stylist/stylist.html',
+                        // controller: 'ScheduleController',
                     }
                 }
             })
-            .state('stylistdashboard', {
-                url: '/stylistdashboard',
-                views: {
-                    'header': {
-                        templateUrl: 'views/headers/header.html',
-                        controller: 'HeaderController',
-                    },
-                    'content': {
-                        templateUrl: '/views/stylist/stylistDEMOPAGE.html',
-                        controller: 'stylistDEMOPAGEController',
-                    },
-                    'footer': {
-                        templateUrl: 'views/footer.html',
-                    }
-                }
-            })
+            // .state('stylistdashboard', {
+            //     url: '/stylistdashboard',
+            //     views: {
+            //         'header': {
+            //             templateUrl: 'views/headers/header.html',
+            //             controller: 'HeaderController',
+            //         },
+            //         'content': {
+            //             templateUrl: '/views/stylist/stylistDEMOPAGE.html',
+            //             controller: 'stylistDEMOPAGEController',
+            //         },
+            //         'footer': {
+            //             templateUrl: 'views/footer.html',
+            //         }
+            //     }
+            // })
 
         $urlRouterProvider.otherwise('/')
     }

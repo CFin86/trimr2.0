@@ -5,7 +5,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background: rgb(194, 214, 214);
+    /* background: rgb(194, 214, 214); */
 }
 
 .jumbotron {
@@ -32,7 +32,7 @@ body {
     text-align: center;
     max-width: 100%;
     border-radius: 10px;
-    opacity: .93;
+    opacity: .80;
 }
 
 b,
@@ -195,7 +195,7 @@ input[type=password]:hover {
 .navbar-inverse .navbar-nav>.active>a:focus {
     color: #fff;
     background: rgb(36, 45, 52);
-    opacity: 0.5;
+    opacity: 0.95;
     filter: alpha(opacity=50);
 }
 
@@ -215,12 +215,13 @@ ol.breadcrumb {
     padding-top: 13px;
 }
 
+
 /* start of create Account styles */
 
 #logoDiv {
     position: relative;
     left: 50%;
-    margin-left: -47px;
+    margin-left: -40px;
     width: 94px;
     height: 94px;
     font-size: 18px;
@@ -251,12 +252,33 @@ ol.breadcrumb {
     width: 400px;
     max-width: 100%;
     position: relative;
+    border-radius: 10px;
     /*top: 25rem;*/
     left: 50%;
     margin-left: -175px;
-    
 }
 
+#email {
+    font-size: 16px;
+    transition: all linear 0.5s;
+    background: transparent;
+}
+
+#email.ng-invalid {
+    color: white;
+    background: #d9534f;
+}
+
+#zipcode {
+    font-size: 16px;
+     transition: all linear 0.5s;
+    background: transparent;
+}
+
+#zipcode.ng-invalid {
+    color: white;
+    background: red;
+}
 #signup-form {
     margin: 0px 10px 0px 10px;
 }
@@ -288,9 +310,10 @@ h2.newAccount2 {
 }
 
 #signUpBtn {
-    left: 50%;
+    /* left: 50%; */
     position: relative;
-    margin-left: -85px;
+    /* margin-left: -85px; */
+    margin-bottom: 7px;
 }
 
 
@@ -298,6 +321,187 @@ h2.newAccount2 {
 
 
 /* STYLIST */
+
+.profile-info span {
+    display: block;
+    font-size: 12px;
+    color: #4CB493;
+    letter-spacing: 2px;
+}
+
+.profile-info a {
+    color: #4CB493;
+}
+
+.profile-info i {
+    color: #4CB493;
+    padding: 15px 35px 0px 35px;
+}
+
+.profile-card:hover .profile-pic {
+    transform: scale(1.1);
+}
+
+.profile-card:hover .profile-info hr {
+    opacity: 1;
+}
+
+#clientViewBtn {
+    position: relative;
+    left: 50%;
+    margin-left: -75px;
+}
+
+
+/* Underline From Center */
+
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 52%;
+    right: 52%;
+    bottom: 0;
+    background: #FFFFFF;
+    border-radius: 50%;
+    height: 3px;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.profile-card:hover .hvr-underline-from-center:before,
+.profile-card:focus .hvr-underline-from-center:before,
+.profile-card:active .hvr-underline-from-center:before {
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #CECECE;
+}
+
+.loginH1 {
+    color: gray;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.src-image {
+    display: none;
+}
+
+.card {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #CCC;
+    border-radius: 8px;
+    text-align: center;
+    padding: 0px;
+    background-color: #284c79;
+    color: rgb(136, 172, 217);
+}
+
+.card .header-bg {
+    /* This stretches the canvas across the entire hero unit */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px #FFF solid;
+    /* This positions the canvas under the text */
+    z-index: 1;
+}
+
+.card .avatar {
+    position: relative;
+    margin-top: 15px;
+    z-index: 100;
+}
+
+.card .avatar img {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 30, 0.8);
+}
+
+
+/* footer styles */
+
+.navbar-absolute-bottom {
+    background: lightblue;
+    /*bottom: 1.2rem;*/
+}
+
+.rowBottom {
+    padding-top: 0.5rem;
+    padding-bottom: 1.2rem;
+}
+
+.copyRight {
+    padding-top: 1rem;
+}
+
+body {
+    /* background: no-repeat center url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&dl=phung-h-i-247271.jpg&s=aa19eec5e88a5acb6e92fb039e5e38f1, ')  */
+}
+
+.container {
+    padding: 20px;
+}
+
+.profile-card {
+    background-color: #222222;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    position: absolute;
+    top: -65px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    max-width: 100px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.profile-info {
+    color: #BDBDBD;
+    padding: 25px;
+    position: relative;
+    margin-top: 15px;
+}
+
+.profile-info h2 {
+    color: #E8E8E8;
+    letter-spacing: 4px;
+    padding-bottom: 12px;
+}
 
 .profile-info span {
     display: block;
@@ -366,226 +570,54 @@ h2.newAccount2 {
     background: #CECECE;
 }
 
-h1 {
-    color: white;
-    text-align: center;
+.img-responsive {
+    border-radius: 10px;
 }
-
-.src-image {
-    display: none;
-}
-
-.card {
-    overflow: hidden;
-    position: relative;
-    border: 1px solid #CCC;
-    border-radius: 8px;
-    text-align: center;
-    padding: 0px;
-    background-color: #284c79;
-    color: rgb(136, 172, 217);
-}
-
-.card .header-bg {
-    /* This stretches the canvas across the entire hero unit */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    border-bottom: 1px #FFF solid;
-    /* This positions the canvas under the text */
-    z-index: 1;
-}
-
-.card .avatar {
-    position: relative;
-    margin-top: 15px;
-    z-index: 100;
-}
-
-.card .avatar img {
-    width: 100px;
-    height: 100px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 5px solid rgba(0, 0, 30, 0.8);
-}
-
-
-/* footer styles */
-
-.navbar-absolute-bottom {
-    background: lightblue;
-    /*bottom: 1.2rem;*/
-  
-}
-
-.rowBottom {
-    padding-top: 0.5rem;
-    padding-bottom: 1.2rem;
-}
-
-.copyRight {
-    padding-top: 1rem;
-}
-
-
-
- body {
-    /* background: no-repeat center url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&dl=phung-h-i-247271.jpg&s=aa19eec5e88a5acb6e92fb039e5e38f1, ')  */
-
-}
-.container {
-  padding: 20px;
-}
-
-.profile-card {
-    background-color: #222222;
-  margin-bottom: 20px;
-  border-radius: 10px;
-			
-		}
-		
-.profile-pic {
-  border-radius: 50%;
-  position: absolute;
-  top: -65px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 1;
-  max-width: 100px;
-  -webkit-transition: all 0.4s;
-		  transition: all 0.4s;
-				}
-
-				
-.profile-info {
-		color: #BDBDBD;
-		padding: 25px;
-	    position: relative;
-	    margin-top: 15px;
-				}
-		
-.profile-info h2 {
-	color: #E8E8E8;
-    letter-spacing: 4px;
-	  padding-bottom: 12px;
-				}
-				
-.profile-info span {
-	display: block;
-    font-size: 12px;
-    color: #4CB493;
-	letter-spacing: 2px;
-			}
-
-.profile-info a {
-	 color: #4CB493;
-		}
-.profile-info i {
-         color: #4CB493;
-	    padding: 15px 35px 0px 35px;
-		}
-		
-
-.profile-card:hover .profile-pic {
-	
-	transform: scale(1.1);
-		}
-
-.profile-card:hover .profile-info hr  {
-	opacity: 1;
-		}
-		
-		
-		
-		
-/* Underline From Center */
-.hvr-underline-from-center {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  overflow: hidden;
-}
-.hvr-underline-from-center:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 52%;
-  right: 52%;
-  bottom: 0;
-  background: #FFFFFF;
-  border-radius: 50%;
-  height: 3px;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.profile-card:hover .hvr-underline-from-center:before, .profile-card:focus .hvr-underline-from-center:before, .profile-card:active .hvr-underline-from-center:before {
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: #CECECE;
-}
-
-.img-responsive{
-  border-radius: 10px;
-}
-
-
 
 body,
 html {
     width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	font-family: 'Open Sans', sans-serif;
-	color: #000000;
-
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
 }
+
 
 /* Text colors */
 
 .text-color-white {
-	color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .text-color-black {
-	color: #000000;
+    color: #000000;
 }
 
 .text-color-theme {
-	color: #6f5499;
+    color: #6f5499;
 }
+
 
 /* Background colors */
-.theme-bg{
-	background: #6f5499;
+
+.theme-bg {
+    background: #6f5499;
 }
 
-.bg-black{
-	background: #000000;
+.bg-black {
+    background: #000000;
 }
 
 .secondary-bg {
-	background: #f0ecf6;
+    background: #f0ecf6;
 }
 
 
 /* Margin */
+
+
 /* 
 .margin-bottom-0 {
 	margin-bottom: 0 !important;
@@ -651,7 +683,10 @@ html {
 	margin-right: 10px !important;
 } */
 
+
 /* Padding surround */
+
+
 /* 
 .padding-0 {
 	padding: 0px !important;
@@ -667,10 +702,12 @@ html {
 
  */
 
+
 /* Buttons */
-=======
+
 
 /*RAY YOUR SHIT IS FUCKING UP, GIVE A CLASS AND ID TO DIFFERENTIATE*/
+
 
 /* Buttons */
 
@@ -759,6 +796,7 @@ html {
 	padding:13px 40px;
 }*/
 
+
 /*h1{
     height: 50px;
   color:#4CB493 !important;
@@ -767,10 +805,12 @@ html {
   padding-bottom: 70px;
 }*/
 
+
 /*.jumbotron{
   background-color: #222222 !important;
   height: 220px;
 }*/
+
 
 /*#rbdiv{
     padding-left: 170px;

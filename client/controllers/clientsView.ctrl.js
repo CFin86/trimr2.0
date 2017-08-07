@@ -3,6 +3,7 @@ app.controller('clientsViewController', ["$scope", 'UserService', "User", "SEOSe
         // UserService.requireLogin();
         // $scope.user = User.query();
         // console.log(firstname);
+        
         $scope.logout = function () {
             UserService.logout();
             window.location.pathname = "/";
