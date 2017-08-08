@@ -1,4 +1,4 @@
-var app = angular.module("TrimR", ['ui.router', 'ngResource',"TrimR.factories", "TrimR.services"]);
+var app = angular.module("TrimR", ['ui.router', 'ngResource', "TrimR.factories", "TrimR.services"]);
 
 app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
     function ($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -17,7 +17,8 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                         controller: 'WelcomeController'
                     },
                     'footer': {
-                        templateUrl: 'views/footer.html'
+                        templateUrl: 'views/footer.html',
+                        controller: 'WelcomeController'
                     }
                 }
             })
@@ -25,7 +26,7 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                 url: '/createAccount1',
                 views: {
                     'header': {
-                        templateUrl: 'views/headers/createAccountHeader.html',
+                        templateUrl: 'views/headers/header.html',
                         controller: 'HeaderController'
                     },
                     'content': {
@@ -33,7 +34,8 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                         controller: 'NewUserController'
                     },
                     'footer': {
-                        templateUrl: 'views/footer.html'
+                        templateUrl: 'views/footer.html',
+                        controller: 'WelcomeController'
                     }
                 }
             })
@@ -41,7 +43,7 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                 url: '/createAccount2',
                 views: {
                     'header': {
-                        templateUrl: 'views/headers/createAccountHeader.html',
+                        templateUrl: 'views/headers/header.html',
                         controller: 'HeaderController'
                     },
                     'content': {
@@ -49,7 +51,8 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                         controller: 'NewUserController'
                     },
                     'footer': {
-                        templateUrl: 'views/footer.html'
+                        templateUrl: 'views/footer.html',
+                        controller: 'WelcomeController'
                     }
                 }
             })
@@ -65,12 +68,13 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                         controller: 'DonateController'
                     },
                     'footer': {
-                        templateUrl: 'views/footer.html'
+                        templateUrl: 'views/footer.html',
+                        controller: 'WelcomeController'
                     }
                 }
             })
             .state('howItWorks', {
-                url: '/trimrWorks',
+                url: '/trimrworks',
                 views: {
                     'header': {
                         templateUrl: 'views/headers/header.html',
@@ -78,6 +82,79 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                     },
                     'content': {
                         templateUrl: 'views/howItWorks.html',
+                        controller: 'HowItWorksController'
+                    },
+                    'footer': {
+                        templateUrl: 'views/footer.html',
+                        controller: 'WelcomeController'
+                    }
+                }
+            })
+            .state('login', {
+                url: '/login',
+                views: {
+                    'header': {
+                        templateUrl: 'views/headers/header.html',
+                        controller: 'HeaderController'
+                    },
+                    'content': {
+                        templateUrl: 'views/login.html',
+                        controller: 'LoginController'
+                    },
+                    'footer': {
+                        templateUrl: 'views/footer.html',
+                        controller: 'WelcomeController'
+                    }
+                }
+            })
+            .state('notloggedin', {
+                url: '/notloggedin',
+                views: {
+                    'header': {
+                        templateUrl: 'views/headers/header.html',
+                        controller: 'HeaderController'
+                    },
+                    'content': {
+                        templateUrl: 'views/notloggedin.html',
+                        controller: 'LoginController'
+                    },
+                    'footer': {
+                        templateUrl: 'views/footer.html',
+                        controller: 'WelcomeController'
+                    }
+                }
+            })
+             .state('test', {
+                url: '/test',
+                views: {
+                    'header': {
+                        templateUrl: 'views/headers/header.html',
+                        controller: 'HeaderController'
+                    },
+                    'content': {
+                        templateUrl: 'views/test.html',
+                        controller: 'LoginController'
+                    },
+                    'footer': {
+                        templateUrl: 'views/footer.html',
+                        controller: 'WelcomeController'
+                    }
+                }
+            })
+            .state('stylistlogin', {
+                url: '/stylistlogin',
+                views: {
+                    'header': {
+                        templateUrl: 'views/headers/header.html',
+                        controller: 'HeaderController'
+                    },
+                    'content': {
+                        templateUrl: 'views/stylistlogin.html',
+                        controller: "StylistLoginController",
+                    },
+                    'footer': {
+                        templateUrl: 'views/footer.html',
+                        controller: 'WelcomeController'
                     }
                 }
             })
@@ -94,53 +171,27 @@ app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider",
                     },
                     'footer': {
                         templateUrl: 'views/footer.html',
-                    }
-                }
-            })
-            .state('login', {
-                url: '/login',
-                views: {
-                    'content': {
-                        templateUrl: 'views/login.html',
-                        controller: 'LoginController'
-                    }
-                }
-            })
-            .state('stylistlogin', {
-                url: '/stylistlogin',
-                views: {
-                    'content': {
-                        templateUrl: 'views/stylistlogin.html',
-                          controller:"StylistLoginController",
+                        controller: 'WelcomeController'
                     }
                 }
             })
             .state('stylist', {
-                url: '/stylistDashboard',
+                url: '/stylistdashboard',
                 views: {
+                    'header': {
+                        templateUrl: 'views/headers/stylistViewhead.html',
+                        controller: 'ClientHeaderController'
+                    },
                     'content': {
                         templateUrl: 'views/stylist/stylist.html',
-                        // controller: 'ScheduleController',
+                        controller: 'stylistDEMOPAGEController',
+                    },
+                    'footer': {
+                        templateUrl: 'views/footer.html',
+                        controller: 'WelcomeController'
                     }
                 }
             })
-            // .state('stylistdashboard', {
-            //     url: '/stylistdashboard',
-            //     views: {
-            //         'header': {
-            //             templateUrl: 'views/headers/header.html',
-            //             controller: 'HeaderController',
-            //         },
-            //         'content': {
-            //             templateUrl: '/views/stylist/stylistDEMOPAGE.html',
-            //             controller: 'stylistDEMOPAGEController',
-            //         },
-            //         'footer': {
-            //             templateUrl: 'views/footer.html',
-            //         }
-            //     }
-            // })
-
         $urlRouterProvider.otherwise('/')
     }
 ])

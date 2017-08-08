@@ -1,3 +1,5 @@
+<!--ignore-->
+
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -9,29 +11,28 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-<a href="/"><span class="glyphicon glyphicon-scissors" id="header">trimr</span></a>
-            <!-- <a class="navbar-brand" href="/">trimr</a> -->
+
+            <a href="/"><span class="glyphicon glyphicon-scissors" id="header">trimr</span></a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-               <li> <a href="/trimrworks">How it Works</a></li>
-                <!-- <li><a href="/trimrWorks"> How it Works</a></li> -->
+                <li><a href="/trimrworks"> How it Works</a></li>
+
                 <li><a data-toggle="modal" data-target="#contactModal"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a data-toggle="modal" data-target="#stylistModal"><span class="glyphicon glyphicon-scissors"></span> Be a trimr Stylist</a>
+                <li><a data-toggle="modal" data-target="#stylistModal"><span class="glyphicon glyphicon-scissors"></span> Got an Idea for trimr?</a>
                 </li>
-                <li><a href="/createAccount1">Sign Up</a></li>
-                <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                <!-- <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+                <!-- <li><a href="/createAccount1">My Fav Stylist</a></li> -->
+                 <li class="headClick"><button ng-click="logout()"><span class="glyphicon glyphicon-log-in"></span> Logout</button></li></a>
+                <!-- <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>  -->
             </ul>
 
         </div>
     </div>
 </nav>
-
 <div id="contactModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-md">
 
@@ -57,34 +58,14 @@
                     <textarea class="form-control input-md" id="messageBox" placeholder="Please include a brief message" ng-model="content"></textarea>
                     <br>
 
-                    <button type="submit" class="btn btn-danger btn-sm" ng-click="getMessage()" data-dismiss="modal">Send </button>
+                    <button type="submit" class="btn btn-danger btn-sm" ng-click="getMessage()">Send </button>
                     <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
                 </form>
-
             </div>
         </div>
     </div>
 </div>
 
-<!-- Login modal -->
-<!-- <div id="loginModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="loginmodal-container">
-            <h1>Login to Your Account</h1><br>
-            <form>
-                <input type="email" ng-model="email" placeholder="E-mail Address">
-                <input type="password" ng-model="password" placeholder="Password">
-                <button type="submit" class="btn btn-danger btn-lg" ng-click="login()">Login </button>
-                <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Cancel</button>
-            </form>
-
-            <div class="login-help">
-                <a href="#">Forgot Password</a>
-            </div>
-
-        </div>
-    </div>
-</div> -->
 <div id="stylistModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-md">
         <!--  Modal content-->
@@ -98,30 +79,28 @@
             <div class="modal-body">
                 <form class="form-inline">
                     <div class="form-group">
-                        <label class="sr-only" form="subject"> First Name</label>
+                        <label class="sr-only" form="subject">First Name</label>
                         <input type="text" class="form-control input-sm" id="name" placeholder="Name" ng-model="subject2">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" form="email">Email Address</label>
                         <input type="email" class="form-control input-sm" id="email" placeholder="Email" ng-model="email2">
                     </div>
-                    <br>
-                  <!-- <br> -->
                     <div class="form-group">
                         <label class="sr-only" form="subject">Phone Number </label>
                         <input type="text" class="form-control input-sm" id="phone" placeholder="Phone Number" ng-model="number2">
                     </div>
-    
+                    <br>
                     <div class="form-group">
                         <label class="sr-only" form="subject">Alabama Board of Cosmetology and Barbering Licence Number </label>
                         <input type="text" class="form-control input-sm" id="license" placeholder="License Number" ng-model="license2">
                     </div>
                     <br>
                     <br>
-                    <textarea class="form-control input-md" id="messageBox" placeholder="Tell us a little bit about yourself" ng-model="content2"></textarea>
+                    <textarea class="form-control input-md" id="messageBox" placeholder="Please include a brief message" ng-model="content2"></textarea>
                     <br>
-                    <br>
-                    <button class="btn btn-danger btn-sm" ng-click="getStylistMessage()" data-dismiss="modal"> Send  </button>
+
+                    <button class="btn btn-danger btn-sm" ng-click="getStylistMessage()" data-dismiss="modal"> Send This </button>
                     <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
                 </form>
 

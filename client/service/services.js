@@ -1,8 +1,8 @@
 angular.module('TrimR.services', [])
     .service('UserService', ['$http', '$location', function ($http, $location) {
-      var user;
+        var user;
         var role;
-
+        // var stylist;
         this.isLoggedIn = function () {
             if (user) {
                 return true;
@@ -16,34 +16,58 @@ angular.module('TrimR.services', [])
             }
             return false;
         };
+        this.isUser = function () {
+            if (user.role === "user") {
+                return true;
+            }
+            return false;
+        };
+        //   this.isStylist = function () {
+        //     if (user.role === "stylist") {
+        //         return true;
+        //     }
+        //     return false;
+        // };
         this.requireLogin = function () {
             if (!this.isLoggedIn()) {
                 var current = $location.path();
-                $location.path('/login').search('p', current);
+                $location.path('/notloggedin').search('p', current);
             }
         };
-          this.requireAdmin = function () {
-            if (!this.isAdmin()) {
+        this.requireUser = function () {
+            if (!this.isUser()) {
                 var current = $location.path();
-                alert("You're not allowed!")
-                window.location.pathname = "/";
+                window.location.pathname = "/stylistdashboard";
             }
         };
-   this.newUser = function (email, password, zip) {
+        // this.requireStylist = function () {
+        //     if (!this.isStylist()) {
+        //         var current = $location.path();
+        //         window.location.pathname = "/notloggedin";
+        //     }
+        // };
+        this.newUser = function (email, password, zip) {
             return $http({
                 method: "POST",
                 url: "http://localhost:3000/api/users/createAccount",
-                data: { email: email, password: password, zip: zip}
+                data: {
+                    email: email,
+                    password: password,
+                    zip: zip
+                }
             }).then(function (success) {
                 user = success.data;
                 return success.data;
             })
         }
-   this.login = function (email, password) {
+        this.login = function (email, password) {
             return $http({
                 method: "POST",
                 url: "http://localhost:3000/api/users/login",
-                data: { email: email, password: password}
+                data: {
+                    email: email,
+                    password: password
+                }
             }).then(function (success) {
                 user = success.data;
                 return success.data;

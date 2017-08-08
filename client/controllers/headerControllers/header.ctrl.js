@@ -41,7 +41,7 @@ app.controller("HeaderController", ['$scope', '$location', 'EmailFactory', 'User
             }
             var masterEmail = new EmailFactory(newStylistEmail);
             masterEmail.$save(function () {
-                alert("Thanks for your interest in working for TrimR! We'll get in touch with you soon!");
+                alert("Thanks for your interest in working for trimr! We'll get in touch with you soon!");
             }, function () {
                 // console.log("Error sending the email")
                 alert("All forms must be filled correctly!");

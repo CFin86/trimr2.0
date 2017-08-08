@@ -18,13 +18,15 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script> -->
-
+<div class="container">
+    <div id="logoDiv"> <a href="/"><span class="glyphicon glyphicon-scissors" id="logo">trimr</span></a>
+</div>
 <div id="login" class="heading" role="dialog">
     <div class="modal-dialog">
         <div class="loginmodal-container">
             <h1 class="loginH1">Login to Your Account</h1><br>
             <form>
-                <input type="email" ng-model="email" placeholder="E-mail Address" autofocus, required>
+                <input type="email" class="form-control input-sm" id="email" placeholder="Email" ng-model="email">
                 <input type="password" ng-model="password" placeholder="Password" required>
                 <button class="btn btn-danger btn-lg" ng-click="login()">Login </button>
                 <button type="button" class="btn btn-default btn-lg" ng-click="home()">Cancel</button>
@@ -37,3 +39,4 @@
         </div>
     </div>
 </div>
+<!-- <div class="fillerBottom"></div> -->

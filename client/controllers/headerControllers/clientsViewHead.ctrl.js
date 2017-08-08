@@ -1,6 +1,6 @@
 app.controller("ClientHeaderController", ['$scope', '$location', 'EmailFactory', 'UserService', 'SEOService',
     function ($scope, $location, EmailFactory, UserService, SEOService) {
-        UserService.requireLogin();
+        // UserService.requireLogin();
         $scope.getStarted = function () {
             window.location.pathname = "/createAccount";
         };
@@ -40,7 +40,7 @@ app.controller("ClientHeaderController", ['$scope', '$location', 'EmailFactory',
             }
             var masterEmail = new EmailFactory(newStylistEmail);
             masterEmail.$save(function () {
-                alert("Thanks for your interest in working for TrimR! We'll get in touch with you soon!");
+                alert("Thanks for your interest in working for trimr! We'll get in touch with you soon!");
             }, function () {
                 // console.log("Error sending the email")
                 alert("All forms must be filled correctly!");

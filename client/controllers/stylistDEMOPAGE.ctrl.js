@@ -1,14 +1,18 @@
-app.controller('stylistDEMOPAGEController', ["$scope", 'UserService', 'Post', "Category", "SEOService", "$stateParams",
-    function ($scope, UserService, Post, Category, SEOService) {
+app.controller('stylistDEMOPAGEController', ["$scope", 'User','UserService', "SEOService", "$stateParams",
+    function ($scope, User, UserService, SEOService) {
+        // UserService.requireStylist();
         UserService.isLoggedIn();
-            $scope.posts = Post.query();
-            $scope.categories = Category.query();
+        $scope.user = User.query();
+        // $scope.role = User.query({
+        //     role: $location.role
+        // });
+        console.log($scope.role);
 
-            $scope.logout = function () {
-                UserService.logout();
-                window.location.pathname = "/home";
-            };
- 
+        $scope.logout = function () {
+            UserService.logout();
+            window.location.pathname = "/";
+        };
+
         SEOService.setSEO({
             title: 'trimr',
             image: './images/Profilepics/driver.jpg',

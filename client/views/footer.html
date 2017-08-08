@@ -1,12 +1,12 @@
 <footer class="navbar navbar-absolute-bottom">
-  <div class="container-fluid">
+    <div class="container-fluid">
+        <hr>
         <div class="row" align="center">
             <div class="col-xs-12 col-sm-4">
-                <h5>Using TrimR</h5>
+                <h5>Using trimr</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">How It Works</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="/stylistlogin">Stylist Login</a></li>
+                    <li><a href="/trimrworks">How It Works</a></li>
+                    <!-- <li><a href="/stylistlogin">Stylist Login</a></li> -->
                     <li><a data-toggle="modal" data-target="#contactModal">Contact</a></li>
 
                 </ul>
@@ -14,8 +14,9 @@
             <div class="col-xs-12 col-sm-4">
                 <h5>Legal </h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li class="footClick"><button ng-click="logout()">Privacy Policy</button></li>
+                    <li class="footClick"><button ng-click="logout()">Terms of Service</button></li>
+                    <li class="footClick"><button ng-click="logout()">Refresh</button></li>
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-4">
@@ -26,53 +27,54 @@
                     <li><a href="/createAccount1">Sign Up</a></li>
                 </ul>
             </div>
-            </div>
-                
-            
-            <div class="rowBottom" align="center">
-            <div class="col-xs-12 col-sm-12" >
+        </div>
+
+
+        <div class="rowBottom" align="center">
+            <div class="col-xs-12 col-sm-12">
                 <!-- <div class="nav navbar-nav" style="padding: 40px 10px;"> -->
-                    <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/covalence.io"><i class="fa fa-facebook"></i></a>
-                    <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/covalence.io/"><i class="fa fa-instagram"></i></a>
-                    <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/covalence_io"><i class="fa fa-twitter"></i></a>
+                <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/covalence.io"><i class="fa fa-facebook"></i></a>
+                <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/covalence.io/"><i class="fa fa-instagram"></i></a>
+                <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/covalence_io"><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <!-- <p style="padding:10px;"></p> -->
+            <p class="copyRight" align="center">© Copyright 2017 Chris Finney, Taylor Rowell, Ray Randle</p>
+        </div>
+        <div id="contactModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-md">
+
+                <!--Modal content-->
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Contact Us</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label class="sr-only" form="subject">Name</label>
+                                <input type="text" class="form-control input-sm" id="name" placeholder="Name" ng-model="subject">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" form="email">Email Address</label>
+                                <input type="email" class="form-control input-sm" id="email" placeholder="Email" ng-model="email">
+                            </div>
+                            <br>
+                            <textarea class="form-control input-md" id="messageBox" placeholder="Please include a brief message" ng-model="content"></textarea>
+                            <br>
+
+                            <button type="submit" class="btn btn-danger btn-sm" ng-click="getMessage()">Send </button>
+                            <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                        </form>
+
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12">
-                <!-- <p style="padding:10px;"></p> -->
-                <p class="copyRight" align="center">© Copyright 2017 Chris Finney, Taylor Rowell, Ray Randle</p>
-            </div>
-    </div>
-    <div id="contactModal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-md">
-
-        <!--Modal content-->
-        <div class="modal-content">
-
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Contact Us</h4>
-            </div>
-
-            <div class="modal-body">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <label class="sr-only" form="subject">Name</label>
-                        <input type="text" class="form-control input-sm" id="name" placeholder="Name" ng-model="subject">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" form="email">Email Address</label>
-                        <input type="email" class="form-control input-sm" id="email" placeholder="Email" ng-model="email">
-                    </div>
-                    <br>
-                    <textarea class="form-control input-md" id="messageBox" placeholder="Please include a brief message" ng-model="content"></textarea>
-                    <br>
-
-                    <button type="submit" class="btn btn-danger btn-sm" ng-click="getMessage()">Send </button>
-                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
-                </form>
-
             </div>
         </div>
     </div>
-</div>
+</footer>
 </footer>

@@ -1,26 +1,21 @@
-<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
- <!-- <script>
-    System.import('app')
-      .catch(console.error.bind(console));
-  </script> -->
 <div class="jumbotron">
     <br><br><br>
-    <h1 style="color:white"> Choose a Stylist</h1>
-    <div class="col-lg-6 col-lg-offset-4" id="rbdiv">
-<<<<<<< HEAD
-        <a href="#" class="btn btn-outlined btn-theme btn-lg" data-appointlet-organization="mobile-cutz" data-appointlet-service="47886"
-            data-wow-delay="0.7s">Rapid Booking!!</a>
+    <div class="text-center">
+        <h1 style="color:white"> Choose a Stylist</h1>
+        <div class="col-lg-6 col-lg-offset-4" id="rbdiv">
+        </div>
     </div>
-</div>
-<button ng-click="logout()">Log out</button>
-    </div>
+    <!-- <button ng-click="logout()">Log out</button> -->
 </div>
 <div class="text-center">
     <h2>Need a cut on the double? </h2>
     <h4>Rapid booking will pair you</h4>
     <h4>with our next available stylist</h4>
 </div>
-
+<br>
+<!-- <div ng-repeat="u in user">
+<h1>hello your role is {{u.role}}</h1>
+</div> -->
 <button class="btn btn-outlined btn-danger btn-lg" id="clientViewBtn" style="position:center-align" data-appointlet-organization="mobile-cutz"
     data-appointlet-service="47886" data-wow-delay="0.7s">Rapid Booking!!</button>
 
@@ -28,7 +23,7 @@
     <div class="row">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <div class="container">
-            <div class="row ">
+            <div class="row">
                 <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
                 <!-- bootsnipp Circle Menu -->
                 <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5715866801509976" data-ad-slot="3922266447" data-ad-format="auto"></ins> -->
@@ -41,21 +36,6 @@
                     <div>
                         <div class="col-md-4">
                             <div class="profile-card text-center">
-                                <img class="img-responsive" src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
-                                <div class="profile-info">
-                                    <img class="profile-pic" src="https://d537y3nbkeq75.cloudfront.net/imagesizecacheurl.php?path=aHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL3NpbXBsZXN0cmVhbS1kYXRhLXVwbG9hZC9hOTdmYTNlYS0yZjQ4LTExZTctODZiNC0yMjAwMGE0ZjA0NzQucG5n">
-                                    <h2 class="hvr-underline-from-center">Abby Smith<span>Professional Stylist</span></h2>
-                                    <div ui-view="rating"></div>
-                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                                    <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26770"></i></a>
-                                    <a href="http://www.linkedin.com"><i class="fa fa-linkedin fa-3x"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="profile-card text-center">
                                 <img class="img-responsive" id="backpic" src="https://images.unsplash.com/photo-1451188502541-13943edb6acb?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
                                 <div class="profile-info">
                                     <img class="profile-pic" src="https://pbs.twimg.com/profile_images/804363756193148928/H_Ere7BZ.jpg">
@@ -64,8 +44,27 @@
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                                    <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26772"></i></a>
-                                    <a href="http://www.linkedin.com"><i class="fa fa-linkedin fa-3x"></i></a>
+                                    <div class="row">
+
+                                        <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26772"><span class="subtitle">Book</span></i>
+                                        <a href="http://www.instagram.com"><i class="fa fa-instagram fa-3x"><span class="subtitle">instagram</span></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="profile-card text-center">
+                                <img class="img-responsive" src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+                                    <img class="profile-pic" id="keisha" src="http://i.imgur.com/wfw6H9t.png?1">
+                                    <h2 class="hvr-underline-from-center">Keisha Bennett<span>Professional Stylist</span></h2>
+                                    <div>Award-winng hair stylist- with 9 years' experience, positive and friendly attitude, and will arrive prompt. Your time is valuable, Let me give you the best haircut of your life!
+                                                                                                
+                                    </div>
+                                    <div class="row">
+                                        <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26770"><span class="subtitle">Book</span></i>
+                                        <a href="http://www.instagram.com"><i class="fa fa-instagram fa-3x"><span class="subtitle">instagram</span></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -80,8 +79,10 @@
                                     <div>When the Night King comes knocking at your door, will your hair be ready? Be the talk
                                         of Westeros. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                                    <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26769"></i>
-                                    <a href="http://www.linkedin.com"><i class="fa fa-linkedin fa-3x"></i></a>
+                                    <div class="row">
+                                        <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26769"><span class="subtitle">Book</span></i>
+                                        <a href="http://www.instagram.com"><i class="fa fa-instagram fa-3x"><span class="subtitle">instagram</span></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -95,8 +96,10 @@
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                                    <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26770"></i></a>
-                                    <a href="http://www.linkedin.com"><i class="fa fa-linkedin fa-3x"></i></a>
+                                    <div class="row">
+                                        <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26770"><span class="subtitle">Book</span></i>
+                                        <a href="http://www.instagram.com"><i class="fa fa-instagram fa-3x"><span class="subtitle">instagram</span></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -110,44 +113,56 @@
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                                    <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26770"></i></a>
-                                    <a href="http://www.linkedin.com"><i class="fa fa-linkedin fa-3x"></i></a>
+                                    <div class="row">
+                                        <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26770"><span class="subtitle">Book</span></i>
+                                        <a href="http://www.instagram.com"><i class="fa fa-instagram fa-3x"><span class="subtitle">instagram</span></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="profile-card text-center">
-                            <img class="img-responsive" src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
-                            <div class="profile-info">
-                                <img class="profile-pic" src="https://media1.popsugar-assets.com/files/thumbor/MYdqS3PVfe80-SpS-JRNd3OSbxE/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2015/09/08/016/n/1922794/09a82372_edit_img_image_16119370_1441749076_lenny-thumb/i/Lenny-Kravitz-CB2-Line.jpg">
-                                <h2 class="hvr-underline-from-center">Mike Mcconnell<span>Professional Stylist</span></h2>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                                <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26770"></i></a>
-                                <a href="http://www.linkedin.com"><i class="fa fa-linkedin fa-3x"></i></a>
+                        <div class="col-md-4">
+                            <div class="profile-card text-center">
+                                <img class="img-responsive" src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+                                    <img class="profile-pic" src="https://media1.popsugar-assets.com/files/thumbor/MYdqS3PVfe80-SpS-JRNd3OSbxE/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2015/09/08/016/n/1922794/09a82372_edit_img_image_16119370_1441749076_lenny-thumb/i/Lenny-Kravitz-CB2-Line.jpg">
+                                    <h2 class="hvr-underline-from-center">Mike Mcconnell<span>Professional Stylist</span></h2>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    <div class="row">
+                                        <span>
+                                        <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26770"><span class="subtitle">Book</span></i>
+                                        <a href="http://www.instagram.com"><i class="fa fa-instagram fa-3x"><span class="subtitle">instagram</span></i></a>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="profile-card text-center" ng-repeat="id in Users | filter:{role:'stylist'}">
-                            <img class="img-responsive" src="https://images.unsplash.com/photo-1447877085163-3cce903855cd?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
-                            <div class="profile-info">
-                                <img class="profile-pic" src="{{user.profileImg}}">
-                                <script src="https://d35xd5ovpwtfyi.cloudfront.net/loader/loader.min.js?v=1440696613" async defer></script>
-                                <h2 class="hvr-underline-from-center">{{user.firstName}} {{user.lastName}}<span>Professional Stylist/ King of the North{{</span></h2>
-                                <div>When the Night King comes knocking at your door, will your hair be ready? Be the talk of
-                                    Westeros. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                                <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26769"></i>
-                                <a href="http://www.linkedin.com"><i class="fa fa-linkedin fa-3x"></i></a>
+                        <!-- <div class="col-md-4">
+                            <div class="profile-card text-center" ng-repeat="id in Users | filter:{role:'stylist'}">
+                                <img class="img-responsive" src="https://images.unsplash.com/photo-1447877085163-3cce903855cd?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                                <div class="profile-info">
+                                    <img class="profile-pic" src="{{user.profileImg}}">
+                                    <script src="https://d35xd5ovpwtfyi.cloudfront.net/loader/loader.min.js?v=1440696613" async defer></script>
+                                    <h2 class="hvr-underline-from-center">{{user.firstName}} {{user.lastName}}<span>Professional Stylist/ King of the North{{</span></h2>
+                                    <div>When the Night King comes knocking at your door, will your hair be ready? Be the talk
+                                        of Westeros. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    <div class="row">
+                                        <i class="fa fa-car fa-3x" type="button" data-appointlet-organization="mobile-cutz" data-appointlet-bookable="26769"></i>
+                                        <a href="http://www.linkedin.com"><i class="fa fa-linkedin fa-3x"><span class="subtitle">linkedin</span></i></a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+
+                        </div> -->
+                        <br>
+
+                        <!-- <button class="btn btn-outlined btn-danger btn-lg" style="position:center-align" ng-click="logout()">Log Out</button> -->
+                        <br>
                     </div>
-                    
                 </div>
-                <br>
-                <button id="clientViewBtn" ng-click="logout()" class="btn btn-danger btn-lg">Log Out</button>
-                <br>
             </div>
+        </div>
+    </div>
+</div>

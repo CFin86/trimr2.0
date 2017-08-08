@@ -1,6 +1,8 @@
 body {
-    /*margin: 0px auto;*/
+    margin: 0px auto;
+    border: 0px;
     z-index: 0;
+    padding: 0px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,17 +11,45 @@ body {
 }
 
 .jumbotron {
+    padding-top: 12rem;
+    /* background: url("/images/barberShopCinema.gif")no-repeat center center fixed; */
     background: url("/images/backgroundMaster2.jpg")no-repeat center center fixed;
+    font-family: 'Halflings';
+    width: 100%;
     /* padding-bottom: 6rem !important; */
 }
 
 .jumbotron h1 {
     font-size: 4rem !important;
+    /* margin-bottom: .8rem; */
+    font-family: 'Halflings';
+    font-weight: 400;
 }
 
-.jumbotron h2 {
+h1.firstline {
+    margin-bottom: 2px;
+    line-height: 36px;
+}
+
+h1.secondline {
+    margin-top: 1rem;
+    line-height: 36px;
+    margin: 2px 5px 8px 5px;
+}
+
+
+/* .jumbotron h2 {
     font-size: 2.5rem !important;
-    margin: 10px 5px 8px 5px;
+    margin: 2px 5px 8px 5px;
+} */
+
+.jumbotron h3 {
+    font-size: 2.5rem !important;
+    margin: 2px 5px 8px 5px;
+}
+
+#accountlink {
+    color: blue;
 }
 
 .start-box {
@@ -37,17 +67,19 @@ body {
 
 b,
 strong {
-    color: royalblue;
+    color: #005cb2;
 }
 
 #startBtn {
     margin-bottom: 6px;
 }
 
+
+/* 
 img.img-responsive {
     height: 85px;
     width: 100%;
-}
+} */
 
 .row h2 {
     font-size: 1.5rem !important;
@@ -80,12 +112,17 @@ IMG {
 
 /****** LOGIN MODAL ******/
 
+#login {
+    margin-top: 10rem;
+}
+
 .loginmodal-container {
+    margin-top: 75px;
     padding: 30px;
     max-width: 350px;
     width: 100% !important;
     background-color: #F7F7F7;
-    margin: 0 auto;
+    margin: auto;
     border-radius: 2px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -132,12 +169,14 @@ input[type=password]:hover {
 }
 
 .loginmodal {
+    margin-top: 2rem;
     text-align: center;
     font-size: 14px;
     font-family: 'Arial', sans-serif;
     font-weight: 700;
     height: 36px;
     padding: 0 8px;
+    margin-bottom: 8rem;
     /* border-radius: 3px; */
     /* -webkit-user-select: none;
   user-select: none; */
@@ -177,8 +216,26 @@ input[type=password]:hover {
     font-size: 12px;
 }
 
+.fillerBottom {
+    margin-bottom: 10rem;
+    height: 1px;
+    width: 1px;
+}
+
 
 /* navbar styling */
+
+#header {
+    /* margin-left: 1rem; */
+    margin-top: 7px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.headClick {
+    margin-top: 10px;
+    color: #9d9d9d;
+}
 
 .navbar-inverse {
     background: rgb(36, 45, 52)9F;
@@ -216,19 +273,169 @@ ol.breadcrumb {
 }
 
 
+/* START OG HOW IT WORKS CONTENT VIEW  */
+
+.single-portfolio a {
+    display: block;
+    line-height: 0;
+    position: relative;
+    border-radius: 10px;
+}
+
+.single-portfolio a::before {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.single-portfolio:hover a::before {
+    opacity: .5;
+    transform: scale(1);
+}
+
+.single-portfolio a::after {
+    color: #fff;
+    content: "Clients";
+    font-size: 35px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: scale(0);
+    transition: all 0.3s ease 0s;
+    border-radius: 10px;
+}
+
+.single-portfolio:hover a::after {
+    transform: scale(1);
+}
+
+.single-portfoli2 a {
+    display: block;
+    line-height: 0;
+    position: relative;
+    border-radius: 10px;
+}
+
+.single-portfoli2 a::before {
+    background: #000 none repeat scroll 0 0;
+    content: "Stylists";
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.single-portfoli2:hover a::before {
+    opacity: .5;
+    transform: scale(1);
+}
+
+.single-portfoli2 a::after {
+    color: #fff;
+    content: "Stylists";
+    font-size: 35px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: scale(0);
+    transition: all 0.3s ease 0s;
+    border-radius: 10px;
+}
+
+.single-portfoli2:hover a::after {
+    transform: scale(1);
+}
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+/* h1.works {
+    color: black;
+    text-align: center;
+}
+
+.stylistFAQ {
+    height: 15rem;
+    width: 15rem;
+    background-color: blue;
+    border-radius: 100%;
+}
+
+.clientFAQ {
+    height: 15rem;
+    width: 15rem;
+    background-color: blue;
+    border-radius: 100%;
+}
+ */
+
+
 /* start of create Account styles */
 
+#logo {
+    color: white;
+    font-size: 30px;
+}
+
 #logoDiv {
+    z-index: 2;
     position: relative;
     left: 50%;
-    margin-left: -40px;
-    width: 94px;
-    height: 94px;
-    font-size: 18px;
+    margin-left: -5.8rem;
+    width: 134px;
+    height: 134px;
+    font-size: 3.6rem;
     top: 20px;
-    margin-top: 33px;
-    background-color: red;
-    border: 3px solid blue;
+    margin-top: 6rem;
+    background-color: #d9534f;
+    border: 2px solid #ac2925;
     border-radius: 5px;
     -webkit-box-pack: center;
     color: white;
@@ -262,16 +469,17 @@ ol.breadcrumb {
     font-size: 16px;
     transition: all linear 0.5s;
     background: transparent;
+    margin-bottom: 3px;
 }
 
 #email.ng-invalid {
     color: white;
-    background: #d9534f;
+    background: red;
 }
 
 #zipcode {
     font-size: 16px;
-     transition: all linear 0.5s;
+    transition: all linear 0.5s;
     background: transparent;
 }
 
@@ -279,6 +487,7 @@ ol.breadcrumb {
     color: white;
     background: red;
 }
+
 #signup-form {
     margin: 0px 10px 0px 10px;
 }
@@ -321,6 +530,14 @@ h2.newAccount2 {
 
 
 /* STYLIST */
+
+span.subtitle {
+    color: white !important;
+    font-size: 1.4rem !important;
+    display: block;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .profile-info span {
     display: block;
@@ -399,7 +616,11 @@ h2.newAccount2 {
     color: gray;
 }
 
-h1 {
+.nloginH2 {
+    color: red;
+}
+
+h1.stylist {
     color: white;
     text-align: center;
 }
@@ -451,7 +672,14 @@ h1 {
 
 .navbar-absolute-bottom {
     background: lightblue;
+    margin-top: 12rem;
+    margin-bottom: 0px !important;
+    /* position: fixed !important; */
     /*bottom: 1.2rem;*/
+}
+
+.footClick {
+    color: #fff;
 }
 
 .rowBottom {
@@ -463,10 +691,6 @@ h1 {
     padding-top: 1rem;
 }
 
-body {
-    /* background: no-repeat center url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&dl=phung-h-i-247271.jpg&s=aa19eec5e88a5acb6e92fb039e5e38f1, ')  */
-}
-
 .container {
     padding: 20px;
 }
@@ -476,7 +700,9 @@ body {
     margin-bottom: 20px;
     border-radius: 10px;
 }
-
+#keisha{
+    width: 100px;
+}
 .profile-pic {
     border-radius: 50%;
     position: absolute;
@@ -485,6 +711,7 @@ body {
     right: 0;
     margin: auto;
     z-index: 1;
+    max-height: 100px;
     max-width: 100px;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
@@ -495,6 +722,7 @@ body {
     padding: 25px;
     position: relative;
     margin-top: 15px;
+    min-height: 315px;
 }
 
 .profile-info h2 {
@@ -574,16 +802,6 @@ body {
     border-radius: 10px;
 }
 
-body,
-html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    color: #000000;
-}
-
 
 /* Text colors */
 
@@ -613,209 +831,936 @@ html {
 .secondary-bg {
     background: #f0ecf6;
 }
-
-
-/* Margin */
-
-
-/* 
-.margin-bottom-0 {
-	margin-bottom: 0 !important;
+#name{
+    margin: 3px;
+}
+#phone{
+    margin-left: 3px;
+}
+#license {
+    margin-left: 4px;
+    width: 18.9rem
 }
 
-.margin-bottom-10 {
-	margin-bottom: 10px !important;
-}
 
-.margin-bottom-15 {
-	margin-bottom: 15px !important;
-}
-
-.margin-bottom-20 {
-	margin-bottom: 20px !important;
-}
-
-.margin-bottom-30 {
-	margin-bottom: 30px !important;
-}
-
-.margin-bottom-40 {
-	margin-bottom: 40px !important;
-}
-
-.margin-bottom-50 {
-	margin-bottom: 50px !important;
-}
-
-.margin-bottom-60 {
-	margin-bottom: 60px !important;
-}
-
-.margin-bottom-70 {
-	margin-bottom: 70px !important;
-}
-
-.margin-bottom-80 {
-	margin-bottom: 80px !important;
-}
-
-.margin-bottom-90 {
-	margin-bottom: 90px !important;
-}
-
-.margin-bottom-100 {
-	margin-bottom: 100px !important;
-}
-
-.margin-bottom-120 {
-	margin-bottom: 120px !important;
-}
-
-.margin-right-0 {
-	margin-right: 0 !important;
-}
-
-.margin-right-5 {
-	margin-right: 5px !important;
-}
-
-.margin-right-10 {
-	margin-right: 10px !important;
+/* .form-group{
+    width: 1.89rem;
 } */
 
 
-/* Padding surround */
+/* ##### RAYS WACKY STYLIST CALENDAR####### */
 
-
-/* 
-.padding-0 {
-	padding: 0px !important;
+#stylist.jumbotron {
+    padding-top: 10rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    background: url("/images/backgroundMaster2.jpg")no-repeat center center fixed;
+    ;
 }
 
-.padding-30 {
-	padding: 30px !important;
+#raysWrap {
+    width: 100%;
+    margin: 0 auto;
 }
 
-.padding-50 {
-	padding: 40px !important;
+#external-events {
+    float: left;
+    width: 150px;
+    padding: 0 10px;
+    text-align: left;
 }
 
- */
+#external-events h4 {
+    font-size: 16px;
+    margin-top: 0;
+    padding-top: 1em;
+}
+
+.external-event {
+    /* try to mimick the look of a real event */
+    margin: 10px 0;
+    padding: 2px 4px;
+    background: #3366CC;
+    color: #fff;
+    font-size: .85em;
+    cursor: pointer;
+}
+
+#external-events p {
+    margin: 1.5em 0;
+    font-size: 11px;
+    color: #666;
+}
+
+#external-events p input {
+    margin: 0;
+    vertical-align: middle;
+}
+
+#calendar {
+    /* 		float: right; */
+    margin: 0 auto;
+    width: 75%;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px #C3C3C3;
+    -webkit-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+    box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+td.fc-day {
+    background: #FFF !important;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+}
+
+td.fc-today {
+    background: #FFF !important;
+    position: relative;
+}
+
+.fc-first th {
+    font-family: 'Roboto', sans-serif;
+    background: #37474f !important;
+    color: #FFF;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.fc-event-inner {
+    font-family: 'Roboto', sans-serif;
+    background: #03a9f3!important;
+    color: #FFF!important;
+    font-size: 12px!important;
+    font-weight: 500!important;
+    padding: 5px 0px!important;
+}
+
+.fc {
+    direction: ltr;
+    text-align: left;
+}
+
+.fc table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html .fc,
+.fc table {
+    font-size: 1em;
+    font-family: "Helvetica Neue", Helvetica;
+}
+
+.fc td,
+.fc th {
+    padding: 0;
+    vertical-align: top;
+}
+
+tr {
+    width: 75%;
+}
+
+.fc-header td {
+    white-space: nowrap;
+    padding: 15px 10px 0px;
+}
+
+.fc-header-left {
+    width: 25%;
+    text-align: left;
+}
+
+.fc-header-center {
+    text-align: center;
+}
+
+.fc-header-right {
+    width: 25%;
+    text-align: right;
+}
+
+.fc-header-title {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -5px;
+}
+
+.fc-header-title h2 {
+    margin-top: 0;
+    white-space: nowrap;
+    font-size: 32px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+span.fc-button {
+    font-family: 'Roboto', sans-serif;
+    border-color: #37474f;
+    color: #37474f;
+}
+
+.fc-state-down,
+.fc-state-active {
+    background-color: #37474f !important;
+    color: #FFF !important;
+}
+
+.fc .fc-header-space {
+    padding-left: 10px;
+}
+
+.fc-header .fc-button {
+    margin-bottom: 1em;
+    vertical-align: top;
+}
 
 
-/* Buttons */
-<<<<<<< HEAD
+/* buttons edges butting together */
 
-=======
->>>>>>> 677ccb4b7e0b9ef851c6fd06a09a88f54f5f3956
+.fc-header .fc-button {
+    margin-right: -1px;
+}
 
-/*RAY YOUR SHIT IS FUCKING UP, GIVE A CLASS AND ID TO DIFFERENTIATE*/
+.fc-header .fc-corner-right,
+
+/* non-theme */
+
+.fc-header .ui-corner-right {
+    /* theme */
+    margin-right: 0;
+    /* back to normal */
+}
 
 
-/* Buttons */
+/* button layering (for border precedence) */
+
+.fc-header .fc-state-hover,
+.fc-header .ui-state-hover {
+    z-index: 2;
+}
+
+.fc-header .fc-state-down {
+    z-index: 3;
+}
+
+.fc-header .fc-state-active,
+.fc-header .ui-state-active {
+    z-index: 4;
+}
+
+
+/* Content
+------------------------------------------------------------------------*/
+
+.fc-content {
+    clear: both;
+    zoom: 1;
+    /* for IE7, gives accurate coordinates for [un]freezeContentHeight */
+}
+
+.fc-view {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* Cell Styles
+------------------------------------------------------------------------*/
+
+
+/* <th>, usually */
+
+.fc-widget-content {
+    /* <td>, usually */
+    border: 1px solid #e5e5e5;
+}
+
+.fc-widget-header {
+    border-bottom: 1px solid #EEE;
+}
+
+.fc-state-highlight {
+    /* <td> today cell */
+    /* TODO: add .fc-today to <th> */
+    /* background: #fcf8e3; */
+}
+
+.fc-state-highlight>div>div.fc-day-number {
+    background-color: white;
+    color: #FFFFFF;
+    border-radius: 50%;
+    margin: 4px;
+}
+
+.fc-cell-overlay {
+    /* semi-transparent rectangle while dragging */
+    background: #bce8f1;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    /* for IE */
+}
+
+
+/* Buttons
+------------------------------------------------------------------------*/
+
+.fc-button {
+    position: relative;
+    display: inline-block;
+    padding: 0 .6em;
+    overflow: hidden;
+    height: 1.9em;
+    line-height: 1.9em;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.fc-state-default {
+    /* non-theme */
+    border: 1px solid;
+}
+
+.fc-state-default.fc-corner-left {
+    /* non-theme */
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.fc-state-default.fc-corner-right {
+    /* non-theme */
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
 
 
 /*
-.btn {
+	Our default prev/next buttons use HTML entities like ‹ › « »
+	and we'll try to make them look good cross-browser.
+*/
+
+.fc-text-arrow {
+    margin: 0 .4em;
+    font-size: 2em;
+    line-height: 23px;
+    vertical-align: baseline;
+    /* for IE7 */
+}
+
+.fc-button-prev .fc-text-arrow,
+.fc-button-next .fc-text-arrow {
+    /* for ‹ › */
+    font-weight: bold;
+}
 
 
-/*.btn {
-	letter-spacing: 1px;
-	text-decoration: none;
-	background: none;
-    -moz-user-select: none;
+/* icon (for jquery ui) */
+
+.fc-button .fc-icon-wrap {
+    position: relative;
+    float: left;
+    top: 50%;
+}
+
+.fc-button .ui-icon {
+    position: relative;
+    float: left;
+    margin-top: -50%;
+    *margin-top: 0;
+    *top: -50%;
+}
+
+.fc-state-default {
+    border-color: white;
+    color: #ff3b30;
+}
+
+.fc-button-month.fc-state-default,
+.fc-button-agendaWeek.fc-state-default,
+.fc-button-agendaDay.fc-state-default {
+    min-width: 67px;
+    text-align: center;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+.fc-state-hover,
+.fc-state-down,
+.fc-state-active,
+.fc-state-disabled {
+    color: #333333;
+    background-color: #FFE3E3;
+}
+
+.fc-state-hover {
+    color: #ff3b30;
+    text-decoration: none;
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear;
+}
+
+.fc-state-down,
+.fc-state-active {
+    background-color: whitesmoke;
     background-image: none;
-    border: 1px solid transparent;
-    border-radius: 0;
-    cursor: pointer;
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle;
-    white-space: nowrap;
-	font-size:14px;
-	line-height:20px;
-	font-weight:700;
-	text-transform:uppercase;
-	border: 3px solid;
-	padding:8px 20px;
-}
-
-.btn-outlined {
-    border-radius: 0;
-    -webkit-transition: all 0.3s;
-       -moz-transition: all 0.3s;
-            transition: all 0.3s;
-}
-
-.btn-outlined.btn-theme {
-    background: none;
-    color: #FFF;
-    border-color: #4CB493;
-    align-items: center;
-     justify-content: center;
-
-}
-
-.btn-outlined.btn-theme:hover,
-.btn-outlined.btn-theme:active {
-    color: #FFF;
-    background: #4CB493;
-    border-color: #4CB493;
-    position: absolute;
-    
-}
-
-.btn-outlined.btn-black {
-    background: none;
-    color: #000000;
-	border-color: #000000;
-}
-
-.btn-outlined.btn-black:hover,
-.btn-outlined.btn-black:active {
-    color: #FFF;
-    background: #000000;
-    border-color: #000000;
-}
-
-.btn-outlined.btn-white {
-    background: none;
+    outline: 0;
     color: #FFFFFF;
-	border-color: #FFFFFF;
 }
 
-.btn-outlined.btn-white:hover,
-.btn-outlined.btn-white:active {
-    color: #4CB493;
-    background: #FFFFFF;
-    border-color: #FFFFFF;
+.fc-state-disabled {
+    cursor: default;
+    background-image: none;
+    background-color: white;
+    filter: alpha(opacity=65);
+    box-shadow: none;
+    border: 1px solid #FFE3E3;
+    color: #ff3b30;
 }
 
 
-.btn-lg{
-	font-size:18px;
-	line-height:22px;
-	border: 10px solid;
-	padding:13px 40px;
-}*/
+/* Global Event Styles
+------------------------------------------------------------------------*/
+
+.fc-event-container>* {
+    z-index: 8;
+}
+
+.fc-event-container>.ui-draggable-dragging,
+.fc-event-container>.ui-resizable-resizing {
+    z-index: 9;
+}
+
+.fc-event {
+    border: 1px solid #FFF;
+    /* default BORDER color */
+    background-color: #FFF;
+    /* default BACKGROUND color */
+    color: #919191;
+    /* default TEXT color */
+    font-size: 12px;
+    cursor: default;
+}
+
+.fc-event.chill {
+    background-color: #f3dcf8;
+}
+
+.fc-event.info {
+    background-color: #c6ebfe;
+}
+
+.fc-event.important {
+    background-color: #FFBEBE;
+}
+
+.fc-event.success {
+    background-color: #BEFFBF;
+}
+
+.fc-event:hover {
+    opacity: 0.7;
+}
+
+a.fc-event {
+    text-decoration: none;
+}
+
+a.fc-event,
+.fc-event-draggable {
+    cursor: pointer;
+}
+
+.fc-rtl .fc-event {
+    text-align: right;
+}
+
+.fc-event-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    line-height: 15px;
+}
+
+.fc-event-time,
+.fc-event-title {
+    padding: 0 1px;
+}
+
+.fc .ui-resizable-handle {
+    display: block;
+    position: absolute;
+    z-index: 99999;
+    overflow: hidden;
+    /* hacky spaces (IE6/7) */
+    font-size: 300%;
+    /* */
+    line-height: 50%;
+    /* */
+}
 
 
-/*h1{
-    height: 50px;
-  color:#4CB493 !important;
-  text-align: center;
-  font-family: 'Shrikhand', cursive;
-  padding-bottom: 70px;
-}*/
+/* Horizontal Events
+------------------------------------------------------------------------*/
+
+.fc-event-hori {
+    border-width: 1px 0;
+    margin-bottom: 1px;
+}
+
+.fc-ltr .fc-event-hori.fc-event-start,
+.fc-rtl .fc-event-hori.fc-event-end {
+    border-left-width: 1px;
+    /*
+border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+*/
+}
+
+.fc-ltr .fc-event-hori.fc-event-end,
+.fc-rtl .fc-event-hori.fc-event-start {
+    border-right-width: 1px;
+    /*
+border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+*/
+}
 
 
-/*.jumbotron{
-  background-color: #222222 !important;
-  height: 220px;
-}*/
+/* resizable */
+
+.fc-event-hori .ui-resizable-e {
+    top: 0 !important;
+    /* importants override pre jquery ui 1.7 styles */
+    right: -3px !important;
+    width: 7px !important;
+    height: 100% !important;
+    cursor: e-resize;
+}
+
+.fc-event-hori .ui-resizable-w {
+    top: 0 !important;
+    left: -3px !important;
+    width: 7px !important;
+    height: 100% !important;
+    cursor: w-resize;
+}
+
+.fc-event-hori .ui-resizable-handle {
+    _padding-bottom: 14px;
+    /* IE6 had 0 height */
+}
 
 
-/*#rbdiv{
-    padding-left: 170px;
-    position: center;
-} */
+/* Reusable Separate-border Table
+------------------------------------------------------------*/
+
+table.fc-border-separate {
+    border-collapse: separate;
+}
+
+.fc-border-separate th,
+.fc-border-separate td {
+    border-width: 1px 0 0 1px;
+}
+
+.fc-border-separate th.fc-last,
+.fc-border-separate td.fc-last {
+    border-right-width: 1px;
+}
+
+.fc-border-separate tr.fc-last td {}
+
+.fc-border-separate .fc-week .fc-first {
+    border-left: 0;
+}
+
+.fc-border-separate .fc-week .fc-last {
+    border-right: 0;
+}
+
+.fc-border-separate tr.fc-last th {
+    border-bottom-width: 1px;
+    border-color: #cdcdcd;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.fc-border-separate tbody tr.fc-first td,
+.fc-border-separate tbody tr.fc-first th {
+    border-top-width: 0;
+}
+
+
+/* Month View, Basic Week View, Basic Day View
+------------------------------------------------------------------------*/
+
+.fc-grid th {
+    text-align: center;
+}
+
+.fc .fc-week-number {
+    width: 22px;
+    text-align: center;
+}
+
+.fc .fc-week-number div {
+    padding: 0 2px;
+}
+
+.fc-grid .fc-day-number {
+    float: right;
+    padding: 0 2px;
+}
+
+.fc-grid .fc-other-month .fc-day-number {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    /* for IE */
+    /* opacity with small font can sometimes look too faded
+	   might want to set the 'color' property instead
+	   making day-numbers bold also fixes the problem */
+}
+
+.fc-grid .fc-day-content {
+    clear: both;
+    padding: 2px 2px 1px;
+    /* distance between events and day edges */
+}
+
+
+/* event styles */
+
+.fc-grid .fc-event-time {
+    font-weight: bold;
+}
+
+
+/* right-to-left */
+
+.fc-rtl .fc-grid .fc-day-number {
+    float: left;
+}
+
+.fc-rtl .fc-grid .fc-event-time {
+    float: right;
+}
+
+
+/* Agenda Week View, Agenda Day View
+------------------------------------------------------------------------*/
+
+.fc-agenda table {
+    border-collapse: separate;
+}
+
+.fc-agenda-days th {
+    text-align: center;
+}
+
+.fc-agenda .fc-agenda-axis {
+    width: 50px;
+    padding: 0 4px;
+    vertical-align: middle;
+    text-align: right;
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+.fc-agenda .fc-week-number {
+    font-weight: bold;
+}
+
+.fc-agenda .fc-day-content {
+    padding: 2px 2px 1px;
+}
+
+
+/* make axis border take precedence */
+
+.fc-agenda-days .fc-agenda-axis {
+    border-right-width: 1px;
+}
+
+.fc-agenda-days .fc-col0 {
+    border-left-width: 0;
+}
+
+
+/* all-day area */
+
+.fc-agenda-allday th {
+    border-width: 0 1px;
+}
+
+.fc-agenda-allday .fc-day-content {
+    min-height: 34px;
+    /* TODO: doesnt work well in quirksmode */
+    _height: 34px;
+}
+
+
+/* divider (between all-day and slots) */
+
+.fc-agenda-divider-inner {
+    height: 2px;
+    overflow: hidden;
+}
+
+.fc-widget-header .fc-agenda-divider-inner {
+    background: #eee;
+}
+
+
+/* slot rows */
+
+.fc-agenda-slots th {
+    border-width: 1px 1px 0;
+}
+
+.fc-agenda-slots td {
+    border-width: 1px 0 0;
+    background: none;
+}
+
+.fc-agenda-slots td div {
+    height: 20px;
+}
+
+.fc-agenda-slots tr.fc-slot0 th,
+.fc-agenda-slots tr.fc-slot0 td {
+    border-top-width: 0;
+}
+
+.fc-agenda-slots tr.fc-minor th.ui-widget-header {
+    *border-top-style: solid;
+    /* doesn't work with background in IE6/7 */
+}
+
+
+/* Vertical Events
+------------------------------------------------------------------------*/
+
+.fc-event-vert {
+    border-width: 0 1px;
+}
+
+.fc-event-vert.fc-event-start {
+    border-top-width: 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.fc-event-vert.fc-event-end {
+    border-bottom-width: 1px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.fc-event-vert .fc-event-time {
+    white-space: nowrap;
+    font-size: 10px;
+}
+
+.fc-event-vert .fc-event-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.fc-event-vert .fc-event-bg {
+    /* makes the event lighter w/ a semi-transparent overlay  */
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: .25;
+    filter: alpha(opacity=25);
+}
+
+.fc .ui-draggable-dragging .fc-event-bg,
+
+/* TODO: something nicer like .fc-opacity */
+
+.fc-select-helper .fc-event-bg {
+    display: none\9;
+    /* for IE6/7/8. nested opacity filters while dragging don't work */
+}
+
+
+/* resizable */
+
+.fc-event-vert .ui-resizable-s {
+    bottom: 0 !important;
+    /* importants override pre jquery ui 1.7 styles */
+    width: 100% !important;
+    height: 8px !important;
+    overflow: hidden !important;
+    line-height: 8px !important;
+    font-size: 11px !important;
+    font-family: monospace;
+    text-align: center;
+    cursor: s-resize;
+}
+
+.fc-agenda .ui-resizable-resizing {
+    /* TODO: better selector */
+    _overflow: hidden;
+}
+
+thead tr.fc-first {
+    background-color: #f7f7f7;
+}
+
+table.fc-header {
+    background-color: #FFFFFF;
+    border-radius: 6px 6px 0 0;
+}
+
+.fc-week .fc-day>div .fc-day-number {
+    font-size: 15px;
+    margin: 2px;
+    min-width: 19px;
+    padding: 6px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+
+.fc-sun,
+.fc-sat {
+    color: #b8b8b8;
+}
+
+.fc-week .fc-day:hover .fc-day-number {
+    background-color: #B8B8B8;
+    border-radius: 50%;
+    color: #FFFFFF;
+    transition: background-color 0.2s;
+}
+
+.fc-week .fc-day.fc-state-highlight:hover .fc-day-number {
+    background-color: #ff3b30;
+}
+
+.fc-button-today {
+    border: 1px solid rgba(255, 255, 255, .0);
+}
+
+.fc-view-agendaDay thead tr.fc-first .fc-widget-header {
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+/* Events
+-----------------------------------------------------*/
+
+.fc-event {
+    background: #fff !important;
+    color: #000 !important;
+}
+
+
+/* for vertical events */
+
+.fc-event-bg {
+    display: none !important;
+}
+
+.fc-event .ui-resizable-handle {
+    display: none !important;
+}
+
+h1.styleDash {
+    color: #fff !important;
+    font-family: 'Shrikhand', cursive;
+    font-size: 60px
+}
+
+h2 {
+    color: gray;
+}
+
+.time-slot {}
+
+.time-slot input {
+    display: none;
+}
+
+.time-slot label {
+    padding: 10px 20px;
+    color: #FFF;
+    cursor: pointer;
+    background: #EEE;
+    border-radius: 5px;
+    transition: 0.3s ease all;
+}
+
+.time-slot input:checked~label {
+    background: #f2dede;
+    cursor: not-allowed;
+    animation: flashBooked 0.5s ease;
+}
+
+.time-slot input:not(:checked)~label {
+    background: #6AB074;
+    animation: flashAvailable 0.5s ease;
+}
+
+
+/* animation for the time slot to flash red */
+
+@keyframes flashBooked {
+    0%,
+    100% {
+        background: #f2dede;
+        transform: scale(1);
+    }
+    50% {
+        background: #F99090;
+        transform: scale(1.5);
+    }
+}
+
+
+/* animation for the time slot to flash green */
+
+@keyframes flashAvailable {
+    0%,
+    100% {
+        background: #6AB074;
+        transform: scale(1);
+    }
+    50% {
+        background: rgb(119, 218, 78);
+        transform: scale(1.5);
+    }
+}
+
+.btn.btn-primary {
+    background-color: #4CB493 !important;
+    font-family: 'Shrikhand', cursive;
+    font-size: 25px;
+}
+
+.btn-group-vertical {
+    padding-bottom: 20px;
+}
+
+a {
+    color: white;
+    ;
+}

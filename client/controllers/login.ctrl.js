@@ -2,36 +2,27 @@ app.controller("LoginController", ['$scope', 'User', "$location", "UserService",
     function ($scope, User, $location, UserService, SEOService) {
         UserService.me().then(function (me) {
             redirect();
-
         });
+
         $scope.home = function () {
             window.location.pathname = "/";
         }
         $scope.login = function () {
+            $scope.user = User.query();
             UserService.login($scope.email, $scope.password).then(function () {
-                // console.log(user.role);
                 redirect();
+               // loginRedirect();
             }, function (err) {
                 console.log(err);
             });
         };
-        
-        $scope.stylistlogin = function () {
-            window.location.pathname = "/stylistdashboard";
-        }
 
         function redirect() {
             var dest = $location.search().p;
             if (!dest) {
-                dest = '/'
+                dest = '/clientdashboard'
             };
             $location.path(dest).search('p', null).replace();
-            // if ($scope.user.role === "user") {
-            //     location.assign("/");
-            // }
-            // if ($scope.user.role === "stylist") {
-            //     location.assign("/stylist");;
-            // }
         };
 
         SEOService.setSEO({

@@ -5,14 +5,14 @@ app.controller('NewUserController', ["$scope", "User", "SEOService", "$statePara
         // console.log($scope.user);
 
         $scope.getTrimrd = function () {
-            UserService.newUser($scope.email, $scope.password, $scope.zip).then(function () {
-                var u = new User($scope.newUser);
-                u.$save(function () {
-                    $scope.newUser = {};
-                    $scope.user = User.query();
-                });
+            // UserService.newUser($scope.email, $scope.password, $scope.zip).then(function () {
+            //     var u = new User($scope.newUser);
+            //     u.$save(function () {
+            //         $scope.newUser = {};
+            //         $scope.user = User.query();
+            //     });
                 window.location.pathname = "/createAccount2";
-            })
+            // })
         }
         $scope.home = function () {
             window.location.pathname = "/";

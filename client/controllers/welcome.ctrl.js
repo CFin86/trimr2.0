@@ -1,8 +1,8 @@
 app.controller("WelcomeController", ["$scope", "UserService", "User", "$location", "SEOService",
     function ($scope, UserService, User, $location, SEOService) {
-        UserService.me().then(function (me) {
-            redirect()
-        });
+        // UserService.me().then(function (me) {
+            // redirect()
+        // });
 
         function redirect() {
             var dest = $location.search().p;
