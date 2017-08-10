@@ -26,8 +26,9 @@
                 <li><a data-toggle="modal" data-target="#stylistModal"><span class="glyphicon glyphicon-scissors"></span> Got an Idea for trimr?</a>
                 </li>
                 <!-- <li><a href="/createAccount1">My Fav Stylist</a></li> -->
-                 <li class="headClick"><button ng-click="logout()"><span class="glyphicon glyphicon-log-in"></span> Logout</button></li></a>
-                <!-- <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>  -->
+                 <!-- <li class="headClick"><button ng-click="logout()"><span class="glyphicon glyphicon-log-in"></span> Logout</button></li></a> -->
+                 <li><a ng-click="logout()"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>  
+                 <!-- <li class="footClick"><a ng-click="logout()">LogOut</a></li> -->
             </ul>
 
         </div>
@@ -73,35 +74,26 @@
 
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Want to become a trimr Stylist?</h4>
+                <div class="text-center"
+                <h4 class="modal-title">We respect your opinion, and want to know what we can do to be best, ever</h4>
+                </div>
             </div>
 
             <div class="modal-body">
                 <form class="form-inline">
                     <div class="form-group">
                         <label class="sr-only" form="subject">First Name</label>
-                        <input type="text" class="form-control input-sm" id="name" placeholder="Name" ng-model="subject2">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" form="email">Email Address</label>
-                        <input type="email" class="form-control input-sm" id="email" placeholder="Email" ng-model="email2">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" form="subject">Phone Number </label>
-                        <input type="text" class="form-control input-sm" id="phone" placeholder="Phone Number" ng-model="number2">
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label class="sr-only" form="subject">Alabama Board of Cosmetology and Barbering Licence Number </label>
-                        <input type="text" class="form-control input-sm" id="license" placeholder="License Number" ng-model="license2">
+                        <input type="text" class="form-control input-sm" id="name" placeholder="First Name" ng-model="subject2">
                     </div>
                     <br>
                     <br>
-                    <textarea class="form-control input-md" id="messageBox" placeholder="Please include a brief message" ng-model="content2"></textarea>
+                    <textarea class="form-control input-md" id="messageBox" placeholder="Please include a brief message" ng-model="content2" height:"15rem !important"></textarea>
                     <br>
-
-                    <button class="btn btn-danger btn-sm" ng-click="getStylistMessage()" data-dismiss="modal"> Send This </button>
+                    <div class="text-center">
+                        <br>
+                    <button class="btn btn-danger btn-sm" ng-click="getStylistMessage()" data-dismiss="modal"> Send </button>
                     <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    </div>
                 </form>
 
             </div>

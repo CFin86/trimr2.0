@@ -16,6 +16,10 @@ body {
     background: url("/images/backgroundMaster2.jpg")no-repeat center center fixed;
     font-family: 'Halflings';
     width: 100%;
+    box-shadow: 0 1px 2px #C3C3C3;
+    -webkit-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+    box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
     /* padding-bottom: 6rem !important; */
 }
 
@@ -82,11 +86,11 @@ img.img-responsive {
 } */
 
 .row h2 {
-    font-size: 1.5rem !important;
+    font-size: 2.75rem !important;
 }
 
 .row p {
-    font-size: 1.25rem !important;
+    font-size: 2.25rem !important;
 }
 
 IMG {
@@ -227,24 +231,47 @@ input[type=password]:hover {
 
 #header {
     /* margin-left: 1rem; */
-    margin-top: 7px;
+    margin-top: 9px;
     color: #fff;
-    font-size: 22px;
+    font-size: 3.2rem;
 }
+
+#styleClick {}
 
 .headClick {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     color: #9d9d9d;
 }
-
+.navbar{
+    -webkit-box-shadow: 0 10px 6px -6px #999;
+    -moz-box-shadow: 0 10px 6px -6px #999;
+    box-shadow: 0 10px 6px -6px #999;
+}
 .navbar-inverse {
     background: rgb(36, 45, 52)9F;
     opacity: 0.95;
     filter: alpha(opacity=60);
+
 }
 
 .navbar-brand {
     padding: 15px 15px 5px 5px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    padding-top: 25px;
+    font-size: 2.2rem;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        /* padding-bottom: 15px; */
+    }
+}
+
+#signup {
+    padding-top: .3rem;
 }
 
 .navbar-inverse .navbar-nav>.active>a,
@@ -263,13 +290,6 @@ input[type=password]:hover {
     background: rgb(36, 45, 52);
     opacity: 0.5;
     filter: alpha(opacity=50);
-}
-
-
-/* start of create account header */
-
-ol.breadcrumb {
-    padding-top: 13px;
 }
 
 
@@ -327,7 +347,7 @@ ol.breadcrumb {
 
 .single-portfoli2 a::before {
     background: #000 none repeat scroll 0 0;
-    content: "Stylists";
+    content: "";
     height: 100%;
     opacity: 0;
     position: absolute;
@@ -368,13 +388,16 @@ button.accordion {
     padding: 18px;
     width: 100%;
     border: none;
+    border-radius: 10px;
     text-align: left;
     outline: none;
     font-size: 15px;
     transition: 0.4s;
+    font-size: 2.75rem;
 }
 
-button.accordion.active, button.accordion:hover {
+button.accordion.active,
+button.accordion:hover {
     background-color: #ddd;
 }
 
@@ -385,8 +408,10 @@ div.panel {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+
 button.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
     font-size: 13px;
     color: #777;
     float: right;
@@ -394,8 +419,11 @@ button.accordion:after {
 }
 
 button.accordion.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
 }
+
+
 /* h1.works {
     color: black;
     text-align: center;
@@ -583,6 +611,7 @@ span.subtitle {
     -moz-osx-font-smoothing: grayscale;
     position: relative;
     overflow: hidden;
+    font-size: 2rem !important;
 }
 
 .hvr-underline-from-center:before {
@@ -670,10 +699,15 @@ h1.stylist {
 
 /* footer styles */
 
+footer {
+    font-size: 2rem;
+}
+
 .navbar-absolute-bottom {
     background: lightblue;
     margin-top: 12rem;
     margin-bottom: 0px !important;
+    color: black;
     /* position: fixed !important; */
     /*bottom: 1.2rem;*/
 }
@@ -700,9 +734,11 @@ h1.stylist {
     margin-bottom: 20px;
     border-radius: 10px;
 }
-#keisha{
+
+#keisha {
     width: 100px;
 }
+
 .profile-pic {
     border-radius: 50%;
     position: absolute;
@@ -831,12 +867,15 @@ h1.stylist {
 .secondary-bg {
     background: #f0ecf6;
 }
-#name{
+
+#name {
     margin: 3px;
 }
-#phone{
+
+#phone {
     margin-left: 3px;
 }
+
 #license {
     margin-left: 4px;
     width: 18.9rem
@@ -851,14 +890,17 @@ h1.stylist {
 /* ##### RAYS WACKY STYLIST CALENDAR####### */
 
 #stylist.jumbotron {
-    padding-top: 10rem;
+    padding-top: 15rem;
     margin-bottom: 0px;
     margin-top: 0px;
     text-align: center;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     background: url("/images/backgroundMaster2.jpg")no-repeat center center fixed;
-    ;
+    box-shadow: 0 1px 2px #C3C3C3;
+    -webkit-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+    box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
 }
 
 #raysWrap {
@@ -1686,8 +1728,16 @@ table.fc-header {
 
 h1.styleDash {
     color: #fff !important;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Halflings';
     font-size: 60px
+}
+
+.stylistHello {
+    color: #ac2925
+}
+
+#stylistBtn {
+    font-size: 3.5rem;
 }
 
 h2 {
@@ -1752,7 +1802,7 @@ h2 {
 
 .btn.btn-primary {
     background-color: #4CB493 !important;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Halflings';
     font-size: 25px;
 }
 

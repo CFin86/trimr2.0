@@ -13,6 +13,18 @@ app.controller("HowItWorksController", ['$scope',
                     panel.style.maxHeight = panel.scrollHeight + "px";
                 }
             }
-        }
+        } 
+        $scope.showme = true;
+            $scope.ShowHide = function () {
+                //If DIV is hidden it will be visible and vice versa.
+                $scope.showme = $scope.showme ? false : true;
+            }
+              $scope.showit = true;
+            $scope.ShowHide2 = function () {
+                //If DIV is hidden it will be visible and vice versa.
+                $scope.showit = $scope.showit ? false : true;
+            }
+        $('#aCCORDIONlol').addClass('animated fadeInDown');
+        $('#aCCORDIONlol2').addClass('animated fadeInDown');
     }
 ]);
